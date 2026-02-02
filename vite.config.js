@@ -3,11 +3,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/vishesh",
+  base: "/vishesh/",
   optimizeDeps: {
     exclude: ['fsevents']
   },
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       onwarn(warning, warn) {
         console.log('Warning:', warning);

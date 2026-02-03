@@ -142,7 +142,7 @@ export default function About({ forwardedRef }) {
             ref={profile}
             loading="lazy"
             className="aspect-square h-auto w-4/5 mx-auto rounded-md object-cover object-center md:aspect-auto md:w-full"
-            src="/pic.jpeg"
+            src="/vishesh/pic.jpeg"
             width="480"
             height="640"
             alt="portrait image of Vishesh posing at an event"

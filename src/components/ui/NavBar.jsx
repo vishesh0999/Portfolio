@@ -103,7 +103,7 @@ export default function NavBar({ sectionRefs, color }) {
           <a
             ref={cta}
             className="button group relative hover:bg-transparent min-h-[44px] flex items-center"
-            href="/cv/Vishesh_Kumar_CV.pdf"
+            href="/vishesh/cv/Vishesh_Kumar_CV.pdf"
             download="Vishesh_Kumar_CV.pdf"
           >
             <span className="relative w-fit">
@@ -196,7 +196,7 @@ export default function NavBar({ sectionRefs, color }) {
             contact
           </Link>
           <a 
-            href="/cv/Vishesh_Kumar_CV.pdf"
+            href="/vishesh/cv/Vishesh_Kumar_CV.pdf"
             download="Vishesh_Kumar_CV.pdf"
             onClick={handleLinkClick}
             className={`mt-4 px-8 py-4 bg-secondary-400 text-accent-400 rounded-full text-xl font-medium transition-all duration-300 min-h-[44px] flex items-center justify-center ${

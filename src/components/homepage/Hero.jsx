@@ -14,66 +14,84 @@ export default function Hero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Set initial states
+      // Set initial states with GPU acceleration
+      gsap.set([firstLetters.current, lastLetters.current], {
+        force3D: true,
+        transformOrigin: "center center"
+      });
+      
       gsap.set(roleText.current, {
         opacity: 0,
-        y: 50
+        y: 50,
+        force3D: true
       });
       gsap.set(socialLinks.current, {
         opacity: 0,
-        y: 30
+        y: 30,
+        force3D: true
       });
       gsap.set(contactInfo.current, {
         opacity: 0,
-        y: 30
+        y: 30,
+        force3D: true
       });
 
-      // Create main timeline with pin
+      // Create main timeline with optimized settings
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: heroSection.current,
           start: "top top",
-          end: "+=200vh", // Reduced for better spacing
-          scrub: 1,
+          end: "+=300vh", // Reduced for better performance
+          scrub: 1.5, // Reduced scrub for smoother animation
           pin: true,
           anticipatePin: 1,
+          invalidateOnRefresh: true, // Prevents layout issues
         }
       });
 
-      // Text scaling and movement animation
+      // Optimized text animation with GPU acceleration
       tl.to(firstLetters.current, {
-        x: () => -window.innerWidth * 3,
-        scale: 10,
+        x: () => -window.innerWidth * 2.5,
+        scale: 6,
+        opacity: 0,
+        rotation: 0.01, // Forces GPU acceleration
+        force3D: true,
         ease: "power2.inOut",
-        duration: 1.5,
-      }, 0)
+        duration: 2,
+      }, 0.3)
       .to(lastLetters.current, {
-        x: () => window.innerWidth * 3,
-        scale: 10,
+        x: () => window.innerWidth * 2.5,
+        scale: 6,
+        opacity: 0,
+        rotation: 0.01, // Forces GPU acceleration
+        force3D: true,
         ease: "power2.inOut",
-        duration: 1.5,
-      }, 0)
-      // Role text animation
+        duration: 2,
+      }, 0.3)
+      // Role text animation with GPU acceleration
       .to(roleText.current, {
         opacity: 1,
         y: 0,
+        force3D: true,
         ease: "power2.out",
-        duration: 0.8,
-      }, 0.8)
+        duration: 1,
+      }, 1.2)
       // Social links animation
       .to(socialLinks.current, {
         opacity: 1,
         y: 0,
+        force3D: true,
         ease: "power2.out",
-        duration: 0.8,
-      }, 1.2)
+        duration: 1,
+      }, 1.8)
       // Contact info animation
       .to(contactInfo.current, {
         opacity: 1,
         y: 0,
+        force3D: true,
         ease: "power2.out",
-        duration: 0.8,
-      }, 1.6);
+        duration: 1,
+      }, 2.2);
 
     });
 
@@ -88,16 +106,18 @@ export default function Hero() {
       aria-label="hero"
     >
       {/* Text Header */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full z-10">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full z-10 overflow-hidden">
         <div 
           ref={firstLetters}
-          className="text-[16vw] text-black font-orbitron font-bold"
+          className="text-[16vw] text-black font-orbitron font-bold will-change-transform transform-gpu"
+          style={{ backfaceVisibility: 'hidden' }}
         >
           VISH
         </div>
         <div 
           ref={lastLetters}
-          className="text-[16vw] text-black font-orbitron font-bold"
+          className="text-[16vw] text-black font-orbitron font-bold will-change-transform transform-gpu"
+          style={{ backfaceVisibility: 'hidden' }}
         >
           ESH
         </div>
@@ -156,7 +176,7 @@ export default function Hero() {
         {/* CV Download Button */}
         <div className="flex justify-center mt-4">
           <a 
-            href="/cv/Vishesh_Kumar_CV.pdf" 
+            href="/vishesh/cv/Vishesh_Kumar_CV.pdf" 
             download="Vishesh_Kumar_CV.pdf"
             className="group relative bg-gradient-to-r from-accent-400 to-accent-300 hover:from-accent-500 hover:to-accent-400 border-2 border-accent-300 hover:border-accent-500 rounded-full px-6 py-3 transition-all duration-300 hover:scale-110 flex items-center gap-3 shadow-lg hover:shadow-xl shadow-accent-400/30 hover:shadow-accent-500/40"
           >

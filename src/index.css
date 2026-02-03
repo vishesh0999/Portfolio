@@ -40,6 +40,23 @@
     background-color: #0E0E0C;
     overflow-x: hidden;
   }
+  
+  /* Performance optimizations for animations */
+  .transform-gpu {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  .will-change-transform {
+    will-change: transform, opacity;
+  }
+  
+  /* Smooth scrolling and animation optimizations */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
   a,
   p,
   span {

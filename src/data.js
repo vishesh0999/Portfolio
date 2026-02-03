@@ -8,7 +8,7 @@ export const siteConfig = {
   name: "Vishesh Kumar",
   title: "Vishesh Kumar - AI Product Manager & Strategy Lead",
   description: "AI Product Manager and strategy lead based in San Francisco, CA. Specializing in AI/ML products, data-driven product strategy, and building products that scale.",
-  url: "https://visheshkumar.vercel.app",
+  url: "https://Vinit-Prajapati-17.github.io/vishesh",
   email: "vishesh.kumar@gmail.com",
   social: {
     github: "https://github.com/visheshkumar",

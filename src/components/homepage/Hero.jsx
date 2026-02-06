@@ -106,20 +106,20 @@ export default function Hero() {
       aria-label="hero"
     >
       {/* Text Header */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full z-10 overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full z-10 overflow-hidden gap-16">
         <div 
           ref={firstLetters}
-          className="text-[16vw] text-black font-orbitron font-bold will-change-transform transform-gpu"
+          className="text-[12vw] text-black font-orbitron font-bold will-change-transform transform-gpu"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          VISH
+          LET'S
         </div>
         <div 
           ref={lastLetters}
-          className="text-[16vw] text-black font-orbitron font-bold will-change-transform transform-gpu"
+          className="text-[12vw] text-black font-orbitron font-bold will-change-transform transform-gpu"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          ESH
+          TALK
         </div>
       </div>
 
@@ -142,7 +142,7 @@ export default function Hero() {
       >
         <div className="flex gap-12 justify-center">
           <a 
-            href="https://www.linkedin.com/in/visheshkumar/" 
+            href="https://www.linkedin.com/in/vishesh-prajapati-aipm/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group bg-accent-100 border border-accent-200 rounded-full p-4 hover:bg-accent-200 transition-all duration-300 hover:scale-110"
@@ -164,7 +164,7 @@ export default function Hero() {
           </a>
           
           <a 
-            href="mailto:vishesh@example.com" 
+            href="mailto:vishesh09.pm@gmail.com" 
             className="group bg-accent-100 border border-accent-200 rounded-full p-4 hover:bg-accent-200 transition-all duration-300 hover:scale-110"
           >
             <svg className="w-6 h-6 text-black hover:text-red-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,11 +173,11 @@ export default function Hero() {
           </a>
         </div>
         
-        {/* CV Download Button */}
+        {/* Download Resume Button */}
         <div className="flex justify-center mt-4">
           <a 
-            href="/vishesh/cv/Vishesh_Kumar_CV.pdf" 
-            download="Vishesh_Kumar_CV.pdf"
+            href="/Visheshkumar AI Product Manager.pdf" 
+            download="Visheshkumar_AI_Product_Manager.pdf"
             className="group relative bg-gradient-to-r from-accent-400 to-accent-300 hover:from-accent-500 hover:to-accent-400 border-2 border-accent-300 hover:border-accent-500 rounded-full px-6 py-3 transition-all duration-300 hover:scale-110 flex items-center gap-3 shadow-lg hover:shadow-xl shadow-accent-400/30 hover:shadow-accent-500/40"
           >
             {/* Glow effect */}
@@ -187,7 +187,7 @@ export default function Hero() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
             <span className="relative text-white font-orbitron text-sm font-bold group-hover:text-white transition-colors tracking-wide">
-              DOWNLOAD CV
+              DOWNLOAD RESUME
             </span>
             
             {/* Pulse animation */}

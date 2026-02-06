@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Heading from "../ui/Heading"
 
-const Skills = () => {
+const Skills = ({ forwardedRef }) => {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
   const containerRef = useRef(null)
   const isDragging = useRef(false)
@@ -11,26 +11,26 @@ const Skills = () => {
   const velocity = useRef({ x: 0, y: 0 })
 
   const tools = [
-    { name: 'Python', icon: 'https://img.icons8.com/color/96/python--v1.png' },
-    { name: 'MongoDB', icon: 'https://img.icons8.com/color/96/mongodb.png' },
-    { name: 'SQL', icon: 'https://img.icons8.com/color/96/mysql-logo.png' },
-    { name: 'Jira', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg' },
-    { name: 'Power BI', icon: 'https://logos-world.net/wp-content/uploads/2022/02/Power-BI-Logo.png' },
-    { name: 'Git', icon: 'https://img.icons8.com/color/96/git.png' },
-    { name: 'GitHub', icon: 'https://img.icons8.com/ios-glyphs/96/github.png' },
-    { name: 'Docker', icon: 'https://img.icons8.com/color/96/docker.png' },
-    { name: 'Tableau', icon: 'https://img.icons8.com/color/96/tableau-software.png' },
     { name: 'ChatGPT', icon: 'https://img.icons8.com/color/96/chatgpt.png' },
-    { name: 'Gemini', icon: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/google-gemini-icon.png' },
-    { name: 'Jupyter', icon: 'https://img.icons8.com/fluency/96/jupyter.png' },
-    { name: 'Google Colab', icon: 'https://img.icons8.com/color/96/google-colab.png' },
-    { name: 'PyCharm', icon: 'https://img.icons8.com/color/96/pycharm--v2.png' },
+    { name: 'Claude', icon: '/icons/claude.svg' },
+    { name: 'RAG', icon: 'https://img.icons8.com/color/96/artificial-intelligence.png' },
+    { name: 'Jira', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg' },
     { name: 'Confluence', icon: 'https://img.icons8.com/color/96/confluence--v2.png' },
-    { name: 'Excel', icon: 'https://img.icons8.com/color/96/microsoft-excel-2019--v1.png' },
-    { name: 'Anaconda', icon: 'https://img.icons8.com/dusk/96/anaconda--v2.png' },
+    { name: 'Miro', icon: 'https://www.svgrepo.com/show/517866/miro.svg' },
+    { name: 'SQL', icon: 'https://img.icons8.com/color/96/mysql-logo.png' },
+    { name: 'Power BI', icon: 'https://img.icons8.com/fluency/96/power-bi-2021.png' },
+    { name: 'AWS SageMaker', icon: 'https://img.icons8.com/color/96/amazon-web-services.png' },
+    { name: 'Docker', icon: 'https://img.icons8.com/color/96/docker.png' },
+    { name: 'Google Vertex AI', icon: 'https://img.icons8.com/color/96/google-cloud.png' },
+    { name: 'Azure', icon: 'https://img.icons8.com/color/96/azure-1.png' },
+    { name: 'LangChain', icon: 'https://img.icons8.com/color/96/link--v1.png' },
     { name: 'AWS', icon: 'https://img.icons8.com/color/96/amazon-web-services.png' },
-    { name: 'GCP', icon: 'https://img.icons8.com/color/96/google-cloud.png' },
-    { name: 'OpenAI', icon: 'https://img.icons8.com/color/96/chatgpt.png' },
+    { name: 'Git', icon: 'https://img.icons8.com/color/96/git.png' },
+    { name: 'n8n', icon: 'https://n8n.io/favicon.ico' },
+    { name: 'Jupyter', icon: 'https://img.icons8.com/fluency/96/jupyter.png' },
+    { name: 'Python', icon: 'https://img.icons8.com/color/96/python--v1.png' },
+    { name: 'Tableau', icon: 'https://img.icons8.com/color/96/tableau-software.png' },
+    { name: 'Excel', icon: 'https://img.icons8.com/color/96/microsoft-excel-2019--v1.png' },
   ]
 
   const skillCategories = [
@@ -221,7 +221,14 @@ const Skills = () => {
   }, [])
 
   return (
-    <section id="skills" className="my-[10%]" aria-label="skills">
+    <section 
+      ref={(el) => {
+        if (forwardedRef) forwardedRef(el);
+      }}
+      id="skills" 
+      className="my-[10%]" 
+      aria-label="skills"
+    >
       <Heading title="skills" />
       
       <motion.div

@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 import Heading from "../ui/Heading";
 
-export default function Experience() {
+export default function Experience({ forwardedRef }) {
   const experienceSection = useRef(null);
   const heading = useRef(null);
   const timeline = useRef(null);
@@ -122,7 +122,7 @@ export default function Experience() {
     },
     {
       role: "Product Manager",
-      company: "Capgemini, India",
+      company: "Accenture, India",
       period: "Sept 2020 – Aug 2023",
       type: "previous",
       achievements: [
@@ -151,7 +151,15 @@ export default function Experience() {
   ];
 
   return (
-    <section ref={experienceSection} id="experience" className="my-[10%]" aria-label="professional experience">
+    <section 
+      ref={(el) => {
+        experienceSection.current = el;
+        if (forwardedRef) forwardedRef(el);
+      }} 
+      id="experience" 
+      className="my-[10%]" 
+      aria-label="professional experience"
+    >
       <Heading title="experience" />
       
       <div className="mt-16 relative">

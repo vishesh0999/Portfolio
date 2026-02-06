@@ -11,9 +11,11 @@ import About from "./components/homepage/About";
 import Experience from "./components/homepage/Experience";
 import Skills from "./components/homepage/Skills";
 import Works from "./components/homepage/Works";
+import CaseStudy from "./components/homepage/CaseStudy";
 import Contact from "./components/homepage/Contact";
 import Footer from "./components/ui/Footer";
 import ProjectPage from "./components/ProjectPage";
+import CaseStudyPage from "./components/CaseStudyPage";
 import { siteConfig } from "./data";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,10 +63,11 @@ const HomePage = () => {
         <div className="bg-secondary-100">
           <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
             <About forwardedRef={(el) => (sectionRefs.current[0] = el)} />
-            <Experience />
-            <Skills />
-            <Works forwardedRef={(el) => (sectionRefs.current[1] = el)} />
-            <Contact />
+            <Experience forwardedRef={(el) => (sectionRefs.current[1] = el)} />
+            <Skills forwardedRef={(el) => (sectionRefs.current[2] = el)} />
+            <CaseStudy forwardedRef={(el) => (sectionRefs.current[3] = el)} />
+            <Works forwardedRef={(el) => (sectionRefs.current[4] = el)} />
+            <Contact forwardedRef={(el) => (sectionRefs.current[5] = el)} />
           </main>
           <Footer />
         </div>
@@ -125,6 +128,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/projects/:slug" element={<ProjectPage />} />
+      <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
     </Routes>
   );
 };

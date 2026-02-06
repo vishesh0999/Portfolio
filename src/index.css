@@ -32,9 +32,7 @@
     font-style: normal;
   }
  @media (min-width: 640px) {
-  * {
-    cursor: none;
-  }
+  /* Custom cursor styles removed - using default cursor */
 }
   body {
     background-color: #0E0E0C;

@@ -57,9 +57,9 @@ export default function About({ forwardedRef }) {
               I'm passionate about building AI products that create meaningful impact for users and businesses.
 
               <br></br>
-              <br></br>With 5+ years in product management, I've led cross-functional teams 
+              <br></br>With 4+ years in product management, I've led cross-functional teams 
               to launch AI-powered features that have scaled to millions of users. I believe 
-              in data-driven decision making and user-centric design. 🚀
+              in data-driven decision making and user-centric design. 
               <br></br>
               <br></br>
               I specialize in translating complex AI/ML capabilities into intuitive product 
@@ -114,7 +114,7 @@ export default function About({ forwardedRef }) {
                     </div>
                     <div className="flex-1">
                       <h5 className="text-xl font-semibold text-secondary-700 mb-2">
-                        Bachelor of Technology in Information Technology
+                        Bachelor of Science in Information Technology
                       </h5>
                       <p className="text-secondary-600 text-base mb-3 flex items-center gap-2">
                         <svg className="w-5 h-5 text-secondary-500" fill="currentColor" viewBox="0 0 24 24">

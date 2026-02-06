@@ -4,8 +4,16 @@ import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 import Heading from "../ui/Heading";
 
-export default function Contact() {
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
+export default function Contact({ forwardedRef }) {
+  const [time, setTime] = useState(
+    new Date().toLocaleTimeString('en-US', {
+      timeZone: 'America/Chicago',
+      hour12: true,
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit'
+    })
+  );
   const [buttonText, setButtonText] = useState("Send Message");
 
   const heading = useRef(null)
@@ -31,7 +39,14 @@ export default function Contact() {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime(new Date().toLocaleTimeString());
+      // Set time to Chicago timezone (America/Chicago)
+      setTime(new Date().toLocaleTimeString('en-US', {
+        timeZone: 'America/Chicago',
+        hour12: true,
+        hour: 'numeric',
+        minute: '2-digit',
+        second: '2-digit'
+      }));
     }, 1000);
     return () => clearInterval(timer);
   });
@@ -70,6 +85,10 @@ export default function Contact() {
 
   return (
     <section
+      ref={(el) => {
+        contactSection.current = el;
+        if (forwardedRef) forwardedRef(el);
+      }}
       id="contact"
       className="my-[10%] overflow-hidden"
       aria-label="contact me"
@@ -159,29 +178,54 @@ export default function Contact() {
             <h4 className="text-body-1 2xl:text-4xl font-semibold">Contact Details</h4>
             <div className="flex flex-col space-y-3 text-body-2 2xl:text-3xl">
               <a
-                href="mailto:vishesh.kumar@gmail.com"
+                href="mailto:vishesh09.pm@gmail.com"
                 className="group relative w-fit cursor-pointer"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>vishesh.kumar@gmail.com</span>
+                <span>vishesh09.pm@gmail.com</span>
                 <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>
-              <a
-                href="https://drive.google.com/file/d/1aRhnhQ-G9UOkpJUWGNQApCu05gLXzmmn/view?usp=sharing"
-                className="group relative w-fit cursor-pointer"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>Resume</span>
-                <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
+              <div className="flex gap-4">
+                {/* View Resume */}
+                <a
+                  href="/Visheshkumar AI Product Manager.pdf"
+                  className="group relative w-fit cursor-pointer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>View Resume</span>
+                  <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                </a>
+                
+                {/* Download Resume */}
+                <a
+                  href="/Visheshkumar AI Product Manager.pdf"
+                  download="Visheshkumar_AI_Product_Manager.pdf"
+                  className="group relative w-fit cursor-pointer"
+                >
+                  <span>Download Resume</span>
+                  <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                </a>
+              </div>
              
             </div>
           </div>
           <div className="space-y-3 ">
             <h4 className="text-body-1 2xl:text-4xl font-semibold">My Digital Spaces</h4>
             <div className="space-y-3 text-body-2 2xl:text-3xl">
+              <a
+                href="https://www.linkedin.com/in/vishesh-prajapati-aipm/"
+                className="group group flex w-fit items-center space-x-2"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon icon="pajamas:linkedin" color="#666" />
+                <div className="relative">
+                  <span>LinkedIn</span>
+                  <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                </div>
+              </a>
               <a
                 href="https://github.com/visheshkumar"
                 className="group flex items-center space-x-2"
@@ -194,38 +238,14 @@ export default function Contact() {
                   <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
                 </div>
               </a>
-              <a
-                href="https://www.linkedin.com/in/visheshkumar/"
-                className="group group flex w-fit items-center space-x-2"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon icon="pajamas:linkedin" color="#666" />
-                <div className="relative">
-                  <span>LinkedIn</span>
-                  <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
-                </div>
-              </a>
-              <a
-                href="https://x.com/visheshkumar"
-                className="group group flex w-fit items-center space-x-2"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon icon="pajamas:twitter" color="#666" />
-                <div className="relative">
-                  <span>X</span>
-                  <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
-                </div>
-              </a>
             </div>
           </div>
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold 2xl:text-4xl">Location</h4>
             <div className="space-y-2 text-body-2 2xl:text-3xl">
               <p>
-                San Francisco, CA <br></br>
-                {time}
+                Chicago, USA <br></br>
+                {time} CST
               </p>
             </div>
           </div>

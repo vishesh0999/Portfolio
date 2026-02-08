@@ -127,6 +127,10 @@ export default function CaseStudyPage() {
                     src={caseStudy.heroImage} 
                     alt={`${caseStudy.title} thumbnail`}
                     className="w-full h-auto rounded-xl object-cover"
+                    onError={(e) => {
+                      console.error('Hero image failed to load:', caseStudy.heroImage);
+                      e.target.style.display = 'none';
+                    }}
                   />
                 </div>
               </div>
@@ -615,11 +619,15 @@ export default function CaseStudyPage() {
                     to={`/case-studies/${key}`}
                     className="group bg-secondary-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
                   >
-                    <div className="aspect-[16/9] overflow-hidden bg-gray-900/50">
+                    <div className="aspect-[16/9] overflow-hidden bg-gray-900/50 flex items-center justify-center">
                       <img 
                         src={study.heroImage} 
                         alt={study.title}
                         className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                        onError={(e) => {
+                          console.error('Case study image failed to load:', study.heroImage);
+                          e.target.style.display = 'none';
+                        }}
                       />
                     </div>
                     <div className="p-6">

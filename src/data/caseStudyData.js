@@ -11,7 +11,7 @@ export const detailedCaseStudyData = {
     platform: "Web & Mobile",
     
     // Hero section
-    heroImage: "/Case1.jpg.jpeg",
+    heroImage: "/Portfolio/Case1.jpg.jpeg",
     overview: "Led the development of a comprehensive AI platform that revolutionized e-commerce personalization and automated decision-making, resulting in $3M+ additional revenue and transforming how 50M+ customers interact with the platform.",
     
     // Detailed problem statement
@@ -198,7 +198,7 @@ export const detailedCaseStudyData = {
     platform: "Web Dashboard + API",
     
     // Hero section
-    heroImage: "/Case2.jpeg",
+    heroImage: "/Portfolio/Case2.jpeg",
     overview: "Product managed the development of a comprehensive analytics platform that transformed wealth management through AI-driven insights, improving client retention by 15% while ensuring 100% regulatory compliance across 50,000+ users.",
     
     // Detailed problem statement
@@ -384,7 +384,7 @@ export const detailedCaseStudyData = {
     platform: "Mobile, Desktop & Web",
     
     // Hero section
-    heroImage: "/Sportify.jpeg",
+    heroImage: "/Portfolio/Sportify.jpeg",
     overview: "Led the product strategy to solve Spotify's algorithmic music recommendation staleness affecting 100M+ power users. Designed and launched Discovery Dial, Exploration Mode, and Discovery Stats - industry-first user-controlled discovery features that increased user satisfaction by 12 NPS points and preserved $840M in annual revenue.",
     
     // Detailed problem statement
@@ -571,7 +571,7 @@ export const detailedCaseStudyData = {
     platform: "Mobile, Desktop, Web & Smart Devices",
     
     // Hero section
-    heroImage: "/Youtube.jpeg",
+    heroImage: "/Portfolio/Youtube.jpeg",
     overview: "Led a comprehensive 24-month strategic initiative to grow YouTube Music from 9.7% to 20-25% global market share, closing the gap with Spotify through AI-powered innovation, ecosystem leverage, and emerging market expansion. Projected to add 75-100M subscribers and $5B+ incremental revenue.",
     
     // Detailed problem statement

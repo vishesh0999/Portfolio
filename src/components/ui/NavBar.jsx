@@ -216,16 +216,16 @@ export default function NavBar({ sectionRefs, color }) {
             <span className="font-bold">About</span>
             <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
           </Link>
+          <Link to="/#case-studies" onClick={(e) => handleLinkClick(e, '#case-studies')} className="group relative min-h-[44px] flex items-center">
+            <span className="font-bold">Case Studies</span>
+            <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+          </Link>
           <Link to="/#experience" onClick={(e) => handleLinkClick(e, '#experience')} className="group relative min-h-[44px] flex items-center">
             <span className="font-bold">Experience</span>
             <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
           </Link>
           <Link to="/#skills" onClick={(e) => handleLinkClick(e, '#skills')} className="group relative min-h-[44px] flex items-center">
             <span className="font-bold">Skills</span>
-            <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
-          </Link>
-          <Link to="/#case-studies" onClick={(e) => handleLinkClick(e, '#case-studies')} className="group relative min-h-[44px] flex items-center">
-            <span className="font-bold">Case Studies</span>
             <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
           </Link>
           <Link to="/#works" onClick={(e) => handleLinkClick(e, '#works')} className="group relative min-h-[44px] flex items-center">
@@ -293,12 +293,22 @@ export default function NavBar({ sectionRefs, color }) {
             About
           </Link>
           <Link 
+            to="/#case-studies" 
+            onClick={(e) => handleLinkClick(e, '#case-studies')}
+            className={`text-3xl text-secondary-300 hover:text-white transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center font-bold ${
+              isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+            }`}
+            style={{ transitionDelay: isMenuOpen ? '150ms' : '0ms' }}
+          >
+            Case Studies
+          </Link>
+          <Link 
             to="/#experience" 
             onClick={(e) => handleLinkClick(e, '#experience')}
             className={`text-3xl text-secondary-300 hover:text-white transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center font-bold ${
               isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
             }`}
-            style={{ transitionDelay: isMenuOpen ? '150ms' : '0ms' }}
+            style={{ transitionDelay: isMenuOpen ? '175ms' : '0ms' }}
           >
             Experience
           </Link>
@@ -308,19 +318,9 @@ export default function NavBar({ sectionRefs, color }) {
             className={`text-3xl text-secondary-300 hover:text-white transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center font-bold ${
               isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
             }`}
-            style={{ transitionDelay: isMenuOpen ? '175ms' : '0ms' }}
-          >
-            Skills
-          </Link>
-          <Link 
-            to="/#case-studies" 
-            onClick={(e) => handleLinkClick(e, '#case-studies')}
-            className={`text-3xl text-secondary-300 hover:text-white transition-all duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center font-bold ${
-              isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-            }`}
             style={{ transitionDelay: isMenuOpen ? '200ms' : '0ms' }}
           >
-            Case Studies
+            Skills
           </Link>
           <Link 
             to="/#works" 

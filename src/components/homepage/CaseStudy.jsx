@@ -11,7 +11,7 @@ const caseStudies = [
     type: "Product Strategy • Market Growth • Competitive Analysis",
     year: "2026",
     tools: ["Gemini AI", "Android", "Google Cloud", "A/B Testing", "Market Research", "Analytics"],
-    image: "/Youtube.jpeg",
+    image: "/Portfolio/Youtube.jpeg",
     featured: true
   },
   {
@@ -22,7 +22,7 @@ const caseStudies = [
     type: "Consumer Product • Algorithmic Systems • UX Innovation",
     year: "2026",
     tools: ["BaRT Algorithm", "Python", "TensorFlow", "Redis", "A/B Testing", "React", "ML"],
-    image: "/Sportify.jpeg",
+    image: "/Portfolio/Sportify.jpeg",
     featured: true
   },
   {
@@ -33,7 +33,7 @@ const caseStudies = [
     type: "AI Product Strategy • ML Product Management",
     year: "2024",
     tools: ["GPT-4", "Claude", "Gemini", "AWS SageMaker", "Vertex AI", "Python", "TensorFlow"],
-    image: "/Case1.jpg.jpeg",
+    image: "/Portfolio/Case1.jpg.jpeg",
     featured: true
   },
   {
@@ -44,7 +44,7 @@ const caseStudies = [
     type: "Data Product • Business Intelligence • RegTech",
     year: "2023",
     tools: ["Python", "SQL", "Tableau", "React", "ML Models", "GDPR", "MiFID II"],
-    image: "/Case2.jpeg",
+    image: "/Portfolio/Case2.jpeg",
     featured: true
   }
 ];
@@ -134,12 +134,16 @@ export default function CaseStudy({ forwardedRef }) {
 function CaseStudyCard({ caseStudy }) {
   return (
     <div className="group h-full">
-      <div className="img overflow-hidden rounded-2xl duration-200 ease-linear mb-5 aspect-[16/9] bg-gray-900/50">
+      <div className="img overflow-hidden rounded-2xl duration-200 ease-linear mb-5 aspect-[16/9] bg-gray-900/50 flex items-center justify-center">
         <img
           className="w-full h-full object-contain duration-700 ease-in-out group-hover:scale-105"
           src={caseStudy.image}
           alt={caseStudy.title}
           loading="lazy"
+          onError={(e) => {
+            console.error('Image failed to load:', caseStudy.image);
+            e.target.style.display = 'none';
+          }}
         />
       </div>
       <div className="mt-4">

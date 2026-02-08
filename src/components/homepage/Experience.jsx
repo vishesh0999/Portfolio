@@ -174,58 +174,58 @@ export default function Experience({ forwardedRef }) {
     >
       <Heading title="experience" />
       
-      <div className="mt-16 relative">
+      <div className="mt-10 md:mt-16 relative">
         {/* Timeline Line */}
         <div 
           ref={timeline}
-          className="absolute left-8 md:left-16 top-0 bottom-0 w-1 bg-gradient-to-b from-accent-400 via-accent-300 to-accent-200 rounded-full"
+          className="absolute left-4 sm:left-6 md:left-16 top-0 bottom-0 w-0.5 md:w-1 bg-gradient-to-b from-accent-400 via-accent-300 to-accent-200 rounded-full"
         ></div>
 
-        <div className="space-y-16">
+        <div className="space-y-8 md:space-y-16">
           {experienceData.map((exp, index) => (
             <div 
               key={index}
               ref={el => {
                 if (el) experiences.current[index] = el;
               }}
-              className="relative pl-20 md:pl-32"
+              className="relative pl-10 sm:pl-16 md:pl-32 pr-2 sm:pr-4"
             >
               {/* Timeline Dot */}
-              <div className={`absolute left-6 md:left-14 top-8 w-5 h-5 rounded-full border-4 ${
+              <div className={`absolute left-2.5 sm:left-4 md:left-14 top-4 sm:top-6 md:top-8 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 rounded-full border-2 sm:border-3 md:border-4 ${
                 exp.type === 'current' 
                   ? 'bg-accent-400 border-white shadow-lg shadow-accent-400/30' 
                   : 'bg-accent-300 border-white shadow-lg shadow-accent-300/30'
               }`}></div>
 
               {/* Experience Card */}
-              <div className={`relative rounded-2xl p-8 transition-all duration-500 hover:shadow-2xl ${
+              <div className={`relative rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-500 hover:shadow-2xl ${
                 exp.type === 'current'
                   ? 'bg-white border-2 border-secondary-300 hover:border-secondary-500 shadow-lg'
                   : 'bg-white border-2 border-accent-200 hover:border-accent-400 shadow-lg'
               }`}>
                 
                 {/* Header */}
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 md:mb-8">
                   <div>
-                    <h3 className={`text-3xl font-bold mb-2 ${
+                    <h3 className={`text-xl sm:text-2xl md:text-3xl font-bold mb-2 ${
                       exp.type === 'current' ? 'text-accent-400' : 'text-accent-400'
                     }`}>
                       {exp.role}
                     </h3>
-                    <p className={`text-xl font-semibold ${
+                    <p className={`text-base sm:text-lg md:text-xl font-semibold ${
                       exp.type === 'current' ? 'text-accent-300' : 'text-accent-300'
                     }`}>
                       {exp.company}
                     </p>
                   </div>
-                  <div className="mt-4 lg:mt-0">
-                    <span className={`inline-flex items-center px-6 py-3 rounded-full text-sm font-bold tracking-wide ${
+                  <div className="mt-3 lg:mt-0">
+                    <span className={`inline-flex items-center px-3 sm:px-4 md:px-6 py-2 md:py-3 rounded-full text-xs sm:text-sm font-bold tracking-wide ${
                       exp.type === 'current'
                         ? 'bg-accent-400 text-white shadow-lg'
                         : 'bg-accent-300 text-white shadow-lg'
                     }`}>
                       {exp.type === 'current' && (
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                        <div className="w-2 h-2 bg-green-400 rounded-full mr-2 md:mr-3 animate-pulse"></div>
                       )}
                       {exp.period}
                     </span>
@@ -233,26 +233,26 @@ export default function Experience({ forwardedRef }) {
                 </div>
 
                 {/* Achievements Grid */}
-                <div className="grid gap-6 md:grid-cols-2">
+                <div className="grid gap-4 sm:gap-5 md:gap-6 md:grid-cols-2">
                   {exp.achievements.map((achievement, achIndex) => (
                     <div 
                       key={achIndex}
-                      className={`group relative p-6 rounded-xl transition-all duration-300 hover:scale-105 ${
+                      className={`group relative p-4 sm:p-5 md:p-6 rounded-lg md:rounded-xl transition-all duration-300 hover:scale-105 ${
                         exp.type === 'current'
                           ? 'bg-secondary-50 hover:bg-secondary-100 border-2 border-secondary-200 hover:border-secondary-400'
                           : 'bg-secondary-50 hover:bg-secondary-100 border-2 border-accent-200 hover:border-accent-400'
                       }`}
                     >
-                      <div className="flex items-start gap-4">
-                        <div className={`flex-shrink-0 w-16 h-16 rounded-xl flex items-center justify-center text-white font-bold text-sm shadow-lg ${
+                      <div className="flex items-start gap-3 sm:gap-4">
+                        <div className={`flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg md:rounded-xl flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg ${
                           exp.type === 'current'
                             ? 'bg-gradient-to-br from-accent-400 to-accent-300'
                             : 'bg-gradient-to-br from-accent-300 to-accent-200'
                         }`}>
-                          {achievement.metric}
+                          <span className="text-center px-1">{achievement.metric}</span>
                         </div>
                         <div className="flex-1">
-                          <p className={`text-sm leading-relaxed font-medium ${
+                          <p className={`text-xs sm:text-sm leading-relaxed font-medium ${
                             exp.type === 'current' ? 'text-accent-400' : 'text-accent-400'
                           }`}>
                             {achievement.description}
@@ -261,7 +261,7 @@ export default function Experience({ forwardedRef }) {
                       </div>
                       
                       {/* Hover Effect */}
-                      <div className={`absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                      <div className={`absolute inset-0 rounded-lg md:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
                         exp.type === 'current'
                           ? 'bg-gradient-to-r from-secondary-600/5 to-secondary-700/5'
                           : 'bg-gradient-to-r from-accent-200/5 to-accent-300/5'
@@ -270,11 +270,11 @@ export default function Experience({ forwardedRef }) {
                   ))}
                 </div>
 
-                {/* Decorative Elements */}
-                <div className={`absolute top-4 right-4 w-20 h-20 rounded-full opacity-10 ${
+                {/* Decorative Elements - Hidden on mobile */}
+                <div className={`hidden md:block absolute top-4 right-4 w-20 h-20 rounded-full opacity-10 ${
                   exp.type === 'current' ? 'bg-secondary-600' : 'bg-accent-200'
                 }`}></div>
-                <div className={`absolute bottom-4 left-4 w-12 h-12 rounded-full opacity-5 ${
+                <div className={`hidden md:block absolute bottom-4 left-4 w-12 h-12 rounded-full opacity-5 ${
                   exp.type === 'current' ? 'bg-secondary-600' : 'bg-accent-200'
                 }`}></div>
               </div>
@@ -283,7 +283,7 @@ export default function Experience({ forwardedRef }) {
         </div>
 
         {/* Bottom Timeline Cap */}
-        <div className="absolute left-6 md:left-14 bottom-0 w-5 h-5 bg-accent-200 rounded-full border-4 border-white"></div>
+        <div className="absolute left-2.5 sm:left-4 md:left-14 bottom-0 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-accent-200 rounded-full border-2 sm:border-3 md:border-4 border-white"></div>
       </div>
     </section>
   );

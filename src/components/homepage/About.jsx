@@ -48,9 +48,25 @@ export default function About({ forwardedRef }) {
       aria-label="about me"
     >
       <Heading title="about me" />
-      <div className="mt-10 flex flex-col items-start gap-8 md:flex-row lg:gap-10 ">
-        <div className="top-20 sm:sticky md:top-28 lg:top-32 md:w-3/5">
-          <div className="w-full space-y-4 2xl:space-y-10">
+      <div className="mt-10 flex flex-col items-start gap-8 md:flex-row lg:gap-10">
+        {/* Image - Shows first on mobile, second on desktop */}
+        <div className="order-1 md:order-2 w-full md:w-2/5 top-28 overflow-hidden rounded-md md:sticky px-4 md:px-0">
+          <div className="w-full max-w-md mx-auto md:max-w-none">
+            <img
+              ref={profile}
+              loading="lazy"
+              className="w-full h-auto rounded-md object-cover object-center"
+              src="/Portfolio/pic.jpeg"
+              width="480"
+              height="640"
+              alt="portrait image of Vishesh posing at an event"
+            />
+          </div>
+        </div>
+        
+        {/* Content - Shows second on mobile, first on desktop */}
+        <div className="order-2 md:order-1 w-full md:w-3/5 top-20 sm:sticky md:top-28 lg:top-32">
+          <div className="w-full space-y-4 2xl:space-y-10 px-4 md:px-0">
             <h3
               ref={heading}
               className="text-heading-3 2xl:text-7xl font-semibold leading-tight text-white"
@@ -140,17 +156,6 @@ export default function About({ forwardedRef }) {
               </div>
             </div>
           </div>
-        </div>
-        <div className="top-28 overflow-hidden rounded-md md:sticky md:w-2/5">
-          <img
-            ref={profile}
-            loading="lazy"
-            className="aspect-square h-auto w-4/5 mx-auto rounded-md object-cover object-center md:aspect-auto md:w-full"
-            src="/Portfolio/pic.jpeg"
-            width="480"
-            height="640"
-            alt="portrait image of Vishesh posing at an event"
-          />
         </div>
       </div>
     </section>

@@ -87,7 +87,8 @@ const Skills = ({ forwardedRef }) => {
     const container = containerRef.current
     const items = container.querySelectorAll('.floating-icon')
     const total = items.length
-    const radius = 200
+    // Responsive radius: smaller on mobile
+    const radius = window.innerWidth < 768 ? 130 : 200
 
     // Diagonal rotation angles
     let angleX = 0
@@ -253,7 +254,7 @@ const Skills = ({ forwardedRef }) => {
             {/* LEFT - 3D Floating Icons Sphere */}
             <div
               ref={containerRef}
-              className="relative w-full h-[400px] md:h-[500px] flex items-center justify-center"
+              className="relative w-full h-[300px] md:h-[500px] flex items-center justify-center"
               style={{
                 perspective: '1000px',
                 cursor: 'grab',
@@ -263,12 +264,10 @@ const Skills = ({ forwardedRef }) => {
               {tools.map((tool) => (
                 <img
                   key={`float-${tool.name}`}
-                  className="floating-icon absolute"
+                  className="floating-icon absolute w-[30px] h-[30px] md:w-[45px] md:h-[45px]"
                   src={tool.icon}
                   alt={tool.name}
                   style={{
-                    width: '45px',
-                    height: '45px',
                     objectFit: 'contain',
                     filter: tool.name === 'GitHub' ? 'invert(0.2)' : 'none',
                     pointerEvents: 'none',

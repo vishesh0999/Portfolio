@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Heading from "../ui/Heading";
 
 const caseStudies = [
@@ -52,8 +52,22 @@ const caseStudies = [
 export default function CaseStudy({ forwardedRef }) {
   const containerRef = useRef(null);
   const scrollContainerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // Skip horizontal scroll on mobile
+    
     const container = containerRef.current;
     const scrollContainer = scrollContainerRef.current;
     
@@ -88,7 +102,7 @@ export default function CaseStudy({ forwardedRef }) {
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
 
   return (
     <section
@@ -104,29 +118,46 @@ export default function CaseStudy({ forwardedRef }) {
       }}
       id="case-studies"
       className="relative my-[10%]"
-      style={{ height: '400vh' }}
+      style={{ height: isMobile ? 'auto' : '400vh' }}
       aria-label="case studies"
     >
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
-        <div className="mb-8 px-4 md:px-8 lg:px-12">
-          <Heading title="Case Studies" />
-        </div>
-        <div className="overflow-hidden pl-4 md:pl-8 lg:pl-12">
-          <div 
-            ref={scrollContainerRef}
-            className="flex gap-6 md:gap-8 will-change-transform pr-4 md:pr-8 lg:pr-12"
-            style={{ width: 'max-content' }}
-          >
+      {isMobile ? (
+        // Mobile: Vertical scroll layout
+        <div className="py-10">
+          <div className="px-4">
+            <Heading title="Case Studies" />
+          </div>
+          <div className="mt-10 px-4 space-y-8">
             {caseStudies.map((caseStudy) => (
-              <div key={caseStudy.id} className="w-[80vw] md:w-[55vw] lg:w-[38vw] flex-shrink-0">
-                <Link to={`/case-studies/${caseStudy.slug}`}>
-                  <CaseStudyCard caseStudy={caseStudy} />
-                </Link>
-              </div>
+              <Link key={caseStudy.id} to={`/case-studies/${caseStudy.slug}`}>
+                <CaseStudyCard caseStudy={caseStudy} />
+              </Link>
             ))}
           </div>
         </div>
-      </div>
+      ) : (
+        // Desktop: Horizontal scroll layout
+        <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
+          <div className="mb-8 px-4 md:px-8 lg:px-12">
+            <Heading title="Case Studies" />
+          </div>
+          <div className="overflow-hidden pl-4 md:pl-8 lg:px-12">
+            <div 
+              ref={scrollContainerRef}
+              className="flex gap-6 md:gap-8 will-change-transform pr-4 md:pr-8 lg:pr-12"
+              style={{ width: 'max-content' }}
+            >
+              {caseStudies.map((caseStudy) => (
+                <div key={caseStudy.id} className="w-[80vw] md:w-[55vw] lg:w-[38vw] flex-shrink-0">
+                  <Link to={`/case-studies/${caseStudy.slug}`}>
+                    <CaseStudyCard caseStudy={caseStudy} />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

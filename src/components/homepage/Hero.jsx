@@ -106,7 +106,7 @@ export default function Hero() {
       aria-label="hero"
     >
       {/* Text Header */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full z-10 overflow-hidden gap-16">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center w-full z-10 overflow-hidden gap-4 md:gap-16">
         <div 
           ref={firstLetters}
           className="text-[12vw] text-black font-orbitron font-bold will-change-transform transform-gpu"

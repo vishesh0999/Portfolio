@@ -75,13 +75,13 @@ export default function NavBar({ sectionRefs, color }) {
         if (index === 0) { // About - white to black
           theme = darkTheme;
           nextTheme = lightTheme;
-        } else if (index === 1) { // Experience - black to white  
+        } else if (index === 1) { // Case Study - black to white  
+          theme = lightTheme;
+          nextTheme = lightTheme; // Experience stays white
+        } else if (index === 2) { // Experience - stays white
           theme = lightTheme;
           nextTheme = lightTheme; // Skills stays white
-        } else if (index === 2) { // Skills - stays white
-          theme = lightTheme;
-          nextTheme = lightTheme; // Case Study stays white
-        } else if (index === 3) { // Case Study - stays white
+        } else if (index === 3) { // Skills - stays white
           theme = lightTheme;
           nextTheme = darkTheme; // Projects goes to black
         } else if (index === 4) { // Projects - white to black
@@ -142,13 +142,13 @@ export default function NavBar({ sectionRefs, color }) {
             onLeaveBack: () => {
               // When scrolling back up, apply the previous section's theme
               let prevTheme;
-              if (index === 1) { // Experience -> About
+              if (index === 1) { // Case Study -> About
                 prevTheme = darkTheme;
-              } else if (index === 2) { // Skills -> Experience  
+              } else if (index === 2) { // Experience -> Case Study  
                 prevTheme = lightTheme;
-              } else if (index === 3) { // Case Study -> Skills
+              } else if (index === 3) { // Skills -> Experience
                 prevTheme = lightTheme;
-              } else if (index === 4) { // Projects -> Case Study
+              } else if (index === 4) { // Projects -> Skills
                 prevTheme = lightTheme;
               } else if (index === 5) { // Contact -> Projects
                 prevTheme = darkTheme;

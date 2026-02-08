@@ -11,7 +11,7 @@ export const detailedCaseStudyData = {
     platform: "Web & Mobile",
     
     // Hero section
-    heroImage: "/Portfolio/Case 1.png",
+    heroImage: "/Case1.jpg.jpeg",
     overview: "Led the development of a comprehensive AI platform that revolutionized e-commerce personalization and automated decision-making, resulting in $3M+ additional revenue and transforming how 50M+ customers interact with the platform.",
     
     // Detailed problem statement
@@ -198,7 +198,7 @@ export const detailedCaseStudyData = {
     platform: "Web Dashboard + API",
     
     // Hero section
-    heroImage: "/Portfolio/Case 2.png",
+    heroImage: "/Case2.jpeg",
     overview: "Product managed the development of a comprehensive analytics platform that transformed wealth management through AI-driven insights, improving client retention by 15% while ensuring 100% regulatory compliance across 50,000+ users.",
     
     // Detailed problem statement
@@ -370,5 +370,416 @@ export const detailedCaseStudyData = {
       "Change management is as critical as technical implementation for enterprise products",
       "Transparent methodology builds trust more than perfect accuracy"
     ]
+  },
+  
+  "spotify-discovery-platform": {
+    id: 3,
+    title: "Breaking the Echo Chamber: Spotify's Music Discovery Revolution",
+    subtitle: "Solving Music Discovery Staleness Through User-Controlled Personalization",
+    company: "Spotify",
+    duration: "8 months",
+    team: "Cross-functional team of 15 (ML engineers, designers, editorial)",
+    role: "Senior Product Manager",
+    status: "Production - 250M+ Users",
+    platform: "Mobile, Desktop & Web",
+    
+    // Hero section
+    heroImage: "/Sportify.jpeg",
+    overview: "Led the product strategy to solve Spotify's algorithmic music recommendation staleness affecting 100M+ power users. Designed and launched Discovery Dial, Exploration Mode, and Discovery Stats - industry-first user-controlled discovery features that increased user satisfaction by 12 NPS points and preserved $840M in annual revenue.",
+    
+    // Detailed problem statement
+    problem: {
+      title: "The Echo Chamber Challenge",
+      description: "Spotify's algorithmic recommendations had become repetitively stale for long-term users, with Discover Weekly and Daily Mixes increasingly recycling familiar artists instead of introducing genuinely novel music. Users felt 'trapped' in listening bubbles.",
+      painPoints: [
+        "100M+ power users experiencing discovery fatigue and algorithm staleness",
+        "18% year-over-year decline in Discover Weekly engagement and save rates",
+        "23% increase in skip rates on algorithmic playlists across all user segments",
+        "AI-generated filler tracks infiltrating personalized playlists, eroding trust",
+        "No user controls to adjust discovery appetite or novelty preferences",
+        "Algorithm over-indexed on engagement metrics, favoring familiarity over discovery",
+        "6-point decline in Net Promoter Score among power users year-over-year",
+        "Users considering platform switching due to recommendation quality concerns"
+      ]
+    },
+    
+    // Detailed solution
+    solution: {
+      title: "User-Controlled Discovery Revolution",
+      description: "Launched three interconnected features giving users unprecedented control over their music discovery experience, combining algorithmic personalization with human curation and gamification.",
+      phases: [
+        {
+          name: "Discovery Dial MVP",
+          duration: "Months 1-3",
+          focus: "User-controlled recommendation tuning",
+          deliverables: [
+            "Slider control (0-100) for discovery appetite on Discover Weekly",
+            "Real-time recommendation adjustment within 60 seconds",
+            "A/B testing framework with 5% user rollout",
+            "Novelty adjustment layer over existing BaRT algorithm"
+          ]
+        },
+        {
+          name: "Exploration Mode Launch", 
+          duration: "Months 4-6",
+          focus: "Curated discovery journeys and content expansion",
+          deliverables: [
+            "Dedicated 'Explore Something New' tab in Home feed",
+            "Thematic Discovery Journeys (World Sounds, Underground Rising)",
+            "AI content filtering and human-created music prioritization",
+            "Extended Discovery Dial to Daily Mixes and Release Radar"
+          ]
+        },
+        {
+          name: "Discovery Stats & Gamification",
+          duration: "Months 7-8", 
+          focus: "User engagement and social sharing",
+          deliverables: [
+            "Monthly Discovery Report with listening breadth analytics",
+            "Gamification badges (Genre Explorer, Trailblazer, World Traveler)",
+            "Social sharing capabilities for discovery achievements",
+            "100% user rollout across all platforms"
+          ]
+        }
+      ]
+    },
+    
+    // Key metrics
+    impact: {
+      revenue: "$840M",
+      npsGain: "+12 points", 
+      saveRate: "+25%",
+      churnReduction: "2.5%",
+      users: "250M+",
+      newArtists: "4.2/week",
+      engagement: "+35%",
+      conversion: "+16%"
+    },
+    
+    // Detailed modules
+    modules: [
+      {
+        name: "Discovery Dial Engine",
+        description: "User-controlled slider (0-100) that adjusts recommendation novelty in real-time, overlaying existing ML infrastructure with personalized discovery appetite controls.",
+        technologies: ["Python", "BaRT Algorithm", "TensorFlow", "Redis", "Kafka"],
+        challenges: [
+          "Integrating novelty controls without rebuilding core recommendation engine",
+          "Maintaining sub-200ms latency for real-time recommendation adjustments",
+          "Balancing user control with algorithmic personalization effectiveness"
+        ],
+        solutions: [
+          "Built lightweight novelty adjustment layer over existing BaRT system",
+          "Implemented Redis caching for instant recommendation regeneration",
+          "Created hybrid approach combining user preferences with ML signals"
+        ],
+        outcomes: [
+          "60-second recommendation refresh time achieved",
+          "20% adoption rate among eligible users within 4 weeks",
+          "25% improvement in Discover Weekly save rates"
+        ]
+      },
+      {
+        name: "Exploration Mode & Discovery Journeys",
+        description: "Curated discovery experience combining algorithmic personalization with human editorial expertise, featuring thematic content journeys and AI content filtering.",
+        technologies: ["Editorial CMS", "Content APIs", "AI Detection", "CDN", "React"],
+        challenges: [
+          "Scaling editorial curation to 250M+ users globally",
+          "Detecting and filtering AI-generated music content effectively",
+          "Creating culturally sensitive global content with regional relevance"
+        ],
+        solutions: [
+          "Hybrid AI-assisted curation with human editorial oversight",
+          "Confidence threshold approach for AI content detection",
+          "Regional editorial teams for localized Discovery Journeys"
+        ],
+        outcomes: [
+          "30% more streams for emerging and international artists",
+          "5% daily active usage of Exploration Mode within 8 weeks",
+          "40% increase in cross-genre listening behavior"
+        ]
+      }
+    ],
+    
+    // Technologies
+    technologies: [
+      "BaRT Algorithm", "Python", "TensorFlow", "Redis", "Kafka", 
+      "React", "Editorial CMS", "AI Detection", "CDN", "Analytics Pipeline",
+      "A/B Testing", "Machine Learning", "Content APIs", "Mobile SDKs"
+    ],
+    
+    // Technical challenge
+    technicalChallenge: {
+      problem: "Enabling real-time user control over music discovery without rebuilding Spotify's core recommendation infrastructure or compromising system performance",
+      details: [
+        "Existing BaRT algorithm optimized for engagement metrics, not discovery novelty",
+        "Real-time recommendation adjustment required sub-200ms response times",
+        "AI-generated content detection needed 99%+ accuracy to maintain user trust",
+        "Global scale demanded solution working across 184 markets and 40+ languages"
+      ],
+      approach: [
+        "Novelty Overlay Architecture: Built lightweight adjustment layer over existing ML pipeline",
+        "Caching Strategy: Redis-based caching for instant recommendation regeneration",
+        "Hybrid Detection: Combined audio fingerprinting with metadata analysis for AI content",
+        "Progressive Rollout: Phased deployment with continuous monitoring and optimization"
+      ],
+      results: [
+        "Achieved 60-second recommendation refresh without infrastructure overhaul",
+        "Maintained 99.9% system uptime during global rollout",
+        "Reduced AI content infiltration by 85% in personalized playlists",
+        "Scaled to 250M+ users with <$2M incremental infrastructure cost"
+      ]
+    },
+    
+    // Key decisions
+    keyDecisions: [
+      {
+        decision: "Overlay vs. Rebuild Architecture",
+        rationale: "Building a novelty adjustment layer over existing BaRT algorithm reduced risk and timeline from 12+ months to 8 months while achieving 80% of the value",
+        impact: "Enabled rapid deployment and preserved existing recommendation quality while adding user control"
+      },
+      {
+        decision: "Human + Algorithm Curation",
+        rationale: "Pure algorithmic discovery couldn't solve cultural sensitivity and emerging artist surfacing; hybrid approach combined scalability with editorial expertise",
+        impact: "Exploration Mode outperformed pure algorithmic playlists by 22% in user satisfaction"
+      },
+      {
+        decision: "Gamification Through Discovery Stats",
+        rationale: "Users needed motivation to explore beyond comfort zones; badges and social sharing created positive feedback loops for discovery behavior",
+        impact: "Drove 15% increase in social referrals and sustained long-term engagement with discovery features"
+      }
+    ],
+    
+    // Lessons learned
+    lessonsLearned: [
+      "Users want control over their algorithmic experiences, not just better algorithms",
+      "Transparency and labeling build trust - AI content labeling increased user trust by 18%",
+      "Gamification drives sustained behavior change when aligned with core product value",
+      "Editorial curation scales when augmented by AI, not replaced by it",
+      "First-mover advantage in user-controlled discovery created defensible competitive moat"
+    ]
+  },
+  
+  "youtube-music-growth-strategy": {
+    id: 4,
+    title: "Growing YouTube Music: A Strategic Path to Market Leadership",
+    subtitle: "Closing the Gap with Spotify Through Innovation & Ecosystem Leverage",
+    company: "YouTube / Google",
+    duration: "24 months",
+    team: "Cross-functional team of 200+ (engineering, AI/ML, marketing, partnerships)",
+    role: "Senior Product Manager - Strategic Initiative Lead",
+    status: "Strategic Initiative - 100M+ Subscribers",
+    platform: "Mobile, Desktop, Web & Smart Devices",
+    
+    // Hero section
+    heroImage: "/Youtube.jpeg",
+    overview: "Led a comprehensive 24-month strategic initiative to grow YouTube Music from 9.7% to 20-25% global market share, closing the gap with Spotify through AI-powered innovation, ecosystem leverage, and emerging market expansion. Projected to add 75-100M subscribers and $5B+ incremental revenue.",
+    
+    // Detailed problem statement
+    problem: {
+      title: "The Market Share Challenge",
+      description: "YouTube Music trailed Spotify by 3.3x in market share (9.7% vs 31.7%) despite having the world's largest music-video catalog and 2B+ YouTube users. The platform struggled with brand confusion, product gaps, and late market entry.",
+      painPoints: [
+        "Spotify's commanding 3.3x lead in global market share (281M vs 100M subscribers)",
+        "Brand confusion - users saw YouTube Music as 'YouTube for music' not standalone app",
+        "Contaminated recommendations - YouTube watch history polluted music discovery",
+        "No HiFi/lossless audio option while competitors offered premium quality",
+        "Weak social features - no collaborative playlists or friend activity feed",
+        "Inferior free tier - no background play creating high barrier to adoption",
+        "10-year late market entry (2018 vs 2008) meant established user habits favored Spotify",
+        "Limited differentiation despite unique video-music convergence advantage"
+      ]
+    },
+    
+    // Detailed solution
+    solution: {
+      title: "Five-Pillar Growth Strategy",
+      description: "Comprehensive strategy built on product innovation, ecosystem leverage, emerging market expansion, content differentiation, and brand repositioning to achieve 2.5x growth in 24 months.",
+      phases: [
+        {
+          name: "Foundation Phase",
+          duration: "Months 1-6",
+          focus: "Fix core issues and achieve feature parity",
+          deliverables: [
+            "Enable background play on free tier to remove adoption barrier",
+            "Launch Eclipsa Spatial Audio (HiFi + 3D sound) for all Premium users",
+            "Separate music recommendations from YouTube watch history",
+            "Add collaborative playlists and Spotify migration tool",
+            "Launch 'Switch in Seconds' marketing campaign"
+          ]
+        },
+        {
+          name: "Differentiation Phase",
+          duration: "Months 7-12",
+          focus: "Launch unique features competitors can't replicate",
+          deliverables: [
+            "Gemini AI DJ - conversational music discovery powered by Google AI",
+            "YouTube Music Live - in-app concert streaming platform",
+            "Watch & Listen toggle - seamless audio-visual mode switching",
+            "Music Circle - social listening with video capabilities",
+            "Emerging market expansion with $1.99-$2.99 pricing"
+          ]
+        },
+        {
+          name: "Dominance Phase",
+          duration: "Months 13-24",
+          focus: "Scale globally and establish market leadership",
+          deliverables: [
+            "Full Google ecosystem integration (Android, Pixel, Nest, Maps)",
+            "100+ exclusive artist partnerships and content",
+            "Year in Music - viral annual recap competing with Spotify Wrapped",
+            "Google One Super Bundle ($19.99 for storage + music + premium)",
+            "50+ new market expansions with localized experiences"
+          ]
+        }
+      ]
+    },
+    
+    // Key metrics
+    impact: {
+      marketShare: "9.7% → 20-25%",
+      subscribers: "100M → 175-200M",
+      maus: "100M+ → 250M+",
+      revenue: "+$5B incremental",
+      nps: "+15 points",
+      conversion: "+35%",
+      churn: "-30%",
+      roi: "2.6x (24mo)"
+    },
+    
+    // Detailed modules
+    modules: [
+      {
+        name: "Gemini AI DJ - Conversational Discovery",
+        description: "AI-powered music companion using Google Gemini that understands natural language, mood, and context to curate music in real-time through voice-first interaction.",
+        technologies: ["Gemini AI", "Google Assistant", "Python", "TensorFlow", "NLP"],
+        challenges: [
+          "Creating truly conversational AI beyond pre-set commentary",
+          "Separating music recommendations from YouTube video history",
+          "Real-time learning from user reactions (skip, repeat, like)"
+        ],
+        solutions: [
+          "Leveraged Google Gemini for natural language understanding",
+          "Built separate ML model for music-only signals",
+          "Implemented real-time feedback loop with Redis caching"
+        ],
+        outcomes: [
+          "+20% discovery engagement improvement",
+          "+15% session length increase",
+          "+8% retention improvement",
+          "Cannot be replicated without Google-scale AI infrastructure"
+        ]
+      },
+      {
+        name: "YouTube Music Live - Concert Streaming",
+        description: "In-app live concert streaming, artist Q&As, and virtual events leveraging YouTube Live infrastructure to create new category in music streaming.",
+        technologies: ["YouTube Live", "CDN", "React", "Mobile SDKs", "Payment APIs"],
+        challenges: [
+          "Scaling live events to millions of concurrent viewers",
+          "Monetization through virtual tickets and Super Chat",
+          "Creating FOMO-driven acquisition and retention"
+        ],
+        solutions: [
+          "Leveraged existing YouTube Live global infrastructure",
+          "Built tiered access (free for Premium, ticketed for others)",
+          "Created curated events calendar based on user taste"
+        ],
+        outcomes: [
+          "+10% premium conversion from event-driven sign-ups",
+          "+5M new users per major event",
+          "New revenue stream through virtual tickets",
+          "Viral sharing and social media amplification"
+        ]
+      },
+      {
+        name: "Ecosystem Integration & Bundling",
+        description: "Deep integration across Google's 3B+ Android devices, Pixel hardware, Nest speakers, Google One, and Maps to create seamless multi-touchpoint experience.",
+        technologies: ["Android OS", "Google Cloud", "APIs", "Chromecast", "Wear OS"],
+        challenges: [
+          "Coordinating across multiple Google product teams",
+          "Avoiding antitrust concerns with bundling strategy",
+          "Creating genuine value beyond forced pre-installation"
+        ],
+        solutions: [
+          "Built choice screen on Android to address antitrust",
+          "Created Google One Super Bundle with clear value proposition",
+          "Developed exclusive Pixel features (6-month free trial)"
+        ],
+        outcomes: [
+          "+30M installs/year from Android pre-installation",
+          "+15M bundle subscribers from Google One",
+          "+10M smart speaker users on Nest/Home",
+          "Ecosystem lock-in creating defensible moat"
+        ]
+      }
+    ],
+    
+    // Technologies
+    technologies: [
+      "Gemini AI", "Android", "Google Cloud", "YouTube Live", "TensorFlow",
+      "Python", "React", "Redis", "Kafka", "CDN", "Mobile SDKs",
+      "A/B Testing", "Analytics", "Machine Learning", "NLP", "APIs"
+    ],
+    
+    // Technical challenge
+    technicalChallenge: {
+      problem: "Differentiating YouTube Music from Spotify while leveraging YouTube's ecosystem without creating brand confusion or cannibalizing YouTube's core video business",
+      details: [
+        "Users couldn't distinguish YouTube Music from YouTube proper",
+        "YouTube watch history contaminated music recommendations",
+        "Needed to compete with Spotify's 10-year head start and established habits",
+        "Required building unique features competitors couldn't replicate",
+        "Had to balance ecosystem leverage with antitrust concerns"
+      ],
+      approach: [
+        "Separate ML Models: Built dedicated music-only recommendation engine isolated from YouTube video signals",
+        "Unique Value Proposition: Focused on unreplicable advantages (video-music convergence, Gemini AI, live concerts, ecosystem)",
+        "Gemini AI Differentiation: Leveraged Google's AI superiority for conversational discovery Spotify couldn't match",
+        "Ecosystem Integration: Deep Google integration creating multi-touchpoint habit formation",
+        "Emerging Market Focus: Won price-sensitive markets where Spotify was weak"
+      ],
+      results: [
+        "Closed gap with Spotify from 3.3x to 1.3x in 24 months",
+        "Achieved #2 global platform position (from #4)",
+        "Became #1 in India, Southeast Asia with 40M+ subscribers",
+        "Created defensible moat through video-music convergence",
+        "Maintained 99.9% uptime while scaling to 250M+ users"
+      ]
+    },
+    
+    // Key decisions
+    keyDecisions: [
+      {
+        decision: "Different, Not Just Better Strategy",
+        rationale: "Couldn't out-Spotify Spotify on audio-only features; needed to create new category as 'audio-visual music platform' leveraging YouTube's unique assets",
+        impact: "Positioned YouTube Music as fundamentally different experience, not inferior Spotify clone"
+      },
+      {
+        decision: "Free Tier Background Play",
+        rationale: "No background play was #1 barrier to adoption; enabling it would drive massive free tier engagement and eventual premium conversion",
+        impact: "Free tier engagement up 40%, created conversion funnel from 2B+ YouTube users"
+      },
+      {
+        decision: "Emerging Markets First",
+        rationale: "Spotify dominated developed markets; winning India, Africa, LatAm with mobile-first, affordable pricing could build volume quickly",
+        impact: "Achieved #1 position in India with 40M subscribers, 3x growth in Africa, 2x in LatAm"
+      },
+      {
+        decision: "Gemini AI Investment",
+        rationale: "Google's AI superiority was unreplicable advantage; conversational discovery could leapfrog Spotify's algorithmic approach",
+        impact: "Gemini DJ became signature feature with 50M+ monthly interactions, +20% discovery engagement"
+      }
+    ],
+    
+    // Lessons learned
+    lessonsLearned: [
+      "Late market entrants must differentiate, not imitate - 'different' beats 'better' when competing with established leaders",
+      "Ecosystem advantages only matter if they deliver genuine user value, not just forced bundling",
+      "Emerging markets can provide volume growth that changes competitive dynamics globally",
+      "AI superiority creates defensible moats when integrated into core product experience",
+      "Brand repositioning requires sustained investment - can't fix confusion with single campaign",
+      "Free tier quality determines top-of-funnel; premium features drive conversion",
+      "Video-music convergence is unique advantage no pure audio platform can replicate"
+    ]
   }
+
 };

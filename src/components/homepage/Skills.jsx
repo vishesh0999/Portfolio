@@ -288,9 +288,9 @@ const Skills = ({ forwardedRef }) => {
                   transition={{ duration: 0.4, delay: i * 0.03 }}
                   whileHover={{ 
                     scale: 1.05,
-                    backgroundColor: 'rgba(209, 209, 199, 0.05)',
+                    backgroundColor: 'rgba(249, 250, 251, 0.05)',
                   }}
-                  className="flex flex-col items-center justify-center gap-2 p-3 md:p-4 bg-secondary-100 border border-secondary-200 rounded-lg hover:border-secondary-400 transition-all duration-300 cursor-default"
+                  className="flex flex-col items-center justify-center gap-2 p-3 md:p-4 bg-white border border-gray-200 rounded-lg hover:border-gray-400 transition-all duration-300 cursor-default"
                 >
                   <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
                     <img
@@ -303,7 +303,7 @@ const Skills = ({ forwardedRef }) => {
                       }}
                     />
                   </div>
-                  <span className="text-secondary-600 text-xs md:text-sm text-center font-medium">
+                  <span className="text-gray-600 text-xs md:text-sm text-center font-medium">
                     {tool.name}
                   </span>
                 </motion.div>
@@ -330,12 +330,12 @@ const Skills = ({ forwardedRef }) => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.6 + categoryIndex * 0.1 }}
-                className="bg-secondary-100 border border-secondary-200 rounded-xl p-6 hover:border-secondary-400 transition-all duration-300"
+                className="bg-white border border-gray-200 rounded-xl p-6 hover:border-gray-400 transition-all duration-300"
               >
                 {/* Category Header */}
                 <div className="mb-4">
                   <div className={`w-full h-1 bg-gradient-to-r ${category.color} rounded-full mb-3`}></div>
-                  <h4 className="text-lg font-semibold text-secondary-700 mb-2">
+                  <h4 className="text-lg font-semibold text-gray-700 mb-2">
                     {category.title}
                   </h4>
                 </div>
@@ -353,9 +353,9 @@ const Skills = ({ forwardedRef }) => {
                       }}
                       whileHover={{ 
                         scale: 1.05,
-                        backgroundColor: 'rgba(209, 209, 199, 0.1)',
+                        backgroundColor: 'rgba(249, 250, 251, 0.1)',
                       }}
-                      className="inline-block px-3 py-1.5 bg-secondary-50 text-secondary-600 text-sm rounded-full border border-secondary-200 hover:border-secondary-400 transition-all duration-200 cursor-default"
+                      className="inline-block px-3 py-1.5 bg-gray-50 text-gray-600 text-sm rounded-full border border-gray-200 hover:border-gray-400 transition-all duration-200 cursor-default"
                     >
                       {skill}
                     </motion.span>

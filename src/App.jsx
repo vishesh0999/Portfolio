@@ -63,9 +63,9 @@ const HomePage = () => {
         <div className="bg-secondary-100">
           <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
             <About forwardedRef={(el) => (sectionRefs.current[0] = el)} />
-            <Experience forwardedRef={(el) => (sectionRefs.current[1] = el)} />
-            <Skills forwardedRef={(el) => (sectionRefs.current[2] = el)} />
-            <CaseStudy forwardedRef={(el) => (sectionRefs.current[3] = el)} />
+            <CaseStudy forwardedRef={(el) => (sectionRefs.current[1] = el)} />
+            <Experience forwardedRef={(el) => (sectionRefs.current[2] = el)} />
+            <Skills forwardedRef={(el) => (sectionRefs.current[3] = el)} />
             <Works forwardedRef={(el) => (sectionRefs.current[4] = el)} />
             <Contact forwardedRef={(el) => (sectionRefs.current[5] = el)} />
           </main>

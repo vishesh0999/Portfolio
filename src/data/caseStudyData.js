@@ -575,6 +575,11 @@ export const detailedCaseStudyData = {
     status: "Strategic Initiative - 100M+ Subscribers",
     platform: "Mobile, Desktop, Web & Smart Devices",
     
+    // Links
+    presentationLink: "/Portfolio/YT music.pdf",
+    caseStudyFileLink: "/Portfolio/YT music.md",
+    githubLink: "https://github.com/vishesh0999/YT-Music-Case-Study",
+    
     // Hero section
     heroImage: "/Portfolio/Youtube.jpeg",
     overview: "Led a comprehensive 24-month strategic initiative to grow YouTube Music from 9.7% to 20-25% global market share, closing the gap with Spotify through AI-powered innovation, ecosystem leverage, and emerging market expansion. Projected to add 75-100M subscribers and $5B+ incremental revenue.",

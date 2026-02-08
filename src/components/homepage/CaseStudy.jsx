@@ -10,7 +10,7 @@ const caseStudies = [
     type: "AI Product Strategy • ML Product Management",
     year: "2024",
     tools: ["GPT-4", "Claude", "Gemini", "AWS SageMaker", "Vertex AI", "Python", "TensorFlow"],
-    image: "/vishesh/Case1.jpg.jpeg",
+    image: "/Portfolio/Case1.jpg.jpeg",
     featured: true
   },
   {
@@ -21,7 +21,7 @@ const caseStudies = [
     type: "Data Product • Business Intelligence • RegTech",
     year: "2023",
     tools: ["Python", "SQL", "Tableau", "React", "ML Models", "GDPR", "MiFID II"],
-    image: "/vishesh/Case2.jpeg",
+    image: "/Portfolio/Case2.jpeg",
     featured: true
   }
 ];

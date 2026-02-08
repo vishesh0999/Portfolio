@@ -11,7 +11,7 @@ export const detailedCaseStudyData = {
     platform: "Web & Mobile",
     
     // Hero section
-    heroImage: "/vishesh/Case 1.png",
+    heroImage: "/Portfolio/Case 1.png",
     overview: "Led the development of a comprehensive AI platform that revolutionized e-commerce personalization and automated decision-making, resulting in $3M+ additional revenue and transforming how 50M+ customers interact with the platform.",
     
     // Detailed problem statement
@@ -198,7 +198,7 @@ export const detailedCaseStudyData = {
     platform: "Web Dashboard + API",
     
     // Hero section
-    heroImage: "/vishesh/Case 2.png",
+    heroImage: "/Portfolio/Case 2.png",
     overview: "Product managed the development of a comprehensive analytics platform that transformed wealth management through AI-driven insights, improving client retention by 15% while ensuring 100% regulatory compliance across 50,000+ users.",
     
     // Detailed problem statement

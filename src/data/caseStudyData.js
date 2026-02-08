@@ -383,6 +383,11 @@ export const detailedCaseStudyData = {
     status: "Production - 250M+ Users",
     platform: "Mobile, Desktop & Web",
     
+    // Links
+    presentationLink: "/Portfolio/Spotify.pdf",
+    caseStudyFileLink: "/Portfolio/Spotify.md",
+    githubLink: "https://github.com/vishesh0999/Spotify-Case-Study",
+    
     // Hero section
     heroImage: "/Portfolio/Sportify.jpeg",
     overview: "Led the product strategy to solve Spotify's algorithmic music recommendation staleness affecting 100M+ power users. Designed and launched Discovery Dial, Exploration Mode, and Discovery Stats - industry-first user-controlled discovery features that increased user satisfaction by 12 NPS points and preserved $840M in annual revenue.",

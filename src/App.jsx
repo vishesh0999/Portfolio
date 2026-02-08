@@ -83,44 +83,52 @@ const App = () => {
 
   // Initialize Lenis globally
   useEffect(() => {
-    const lenis = new Lenis();
-    lenisRef.current = lenis;
-    function raf(time) {
-      lenis.raf(time);
+    try {
+      const lenis = new Lenis();
+      lenisRef.current = lenis;
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
       requestAnimationFrame(raf);
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      return () => {
+        lenis.destroy();
+        lenisRef.current = null;
+      };
+    } catch (error) {
+      console.error("Error initializing Lenis:", error);
     }
-    requestAnimationFrame(raf);
-
-    lenis.on("scroll", ScrollTrigger.update);
-
-    return () => {
-      lenis.destroy();
-      lenisRef.current = null;
-    };
   }, []);
 
   // Handle scroll to top or hash on route change
   useLayoutEffect(() => {
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
+    try {
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'manual';
+      }
 
-    if (location.hash) {
-      const el = document.querySelector(location.hash);
-      if (el) {
+      if (location.hash) {
+        const el = document.querySelector(location.hash);
+        if (el) {
+          if (lenisRef.current) {
+            lenisRef.current.scrollTo(el, { immediate: true });
+          } else {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      } else {
+        window.scrollTo(0, 0);
+        document.body.scrollTo(0, 0);
+        
         if (lenisRef.current) {
-          lenisRef.current.scrollTo(el, { immediate: true });
-        } else {
-          el.scrollIntoView({ behavior: "smooth" });
+          lenisRef.current.scrollTo(0, { immediate: true });
         }
       }
-    } else {
-      window.scrollTo(0, 0);
-      document.body.scrollTo(0, 0);
-      
-      if (lenisRef.current) {
-        lenisRef.current.scrollTo(0, { immediate: true });
-      }
+    } catch (error) {
+      console.error("Error handling scroll:", error);
     }
   }, [location.pathname, location.hash]);
 

@@ -790,6 +790,237 @@ export const detailedCaseStudyData = {
       "Free tier quality determines top-of-funnel; premium features drive conversion",
       "Video-music convergence is unique advantage no pure audio platform can replicate"
     ]
+  },
+  
+  "uber-eats-strategy": {
+    id: 5,
+    title: "Uber Eats Product Case Study: How to Win the Food Delivery War",
+    subtitle: "A Fresh Strategy for 2026 to Close the Gap with DoorDash",
+    company: "Uber Eats",
+    duration: "18 months",
+    team: "Cross-functional team of 50+ (engineering, data science, operations, marketing)",
+    role: "Product Manager Candidate",
+    status: "Strategic Initiative - 50M+ Users",
+    platform: "Mobile, Web & Ecosystem Integration",
+    
+    // Links
+    presentationLink: "/Portfolio/Uber.pdf",
+    caseStudyFileLink: "/Portfolio/Uber.md",
+    githubLink: "https://github.com/vishesh0999/Uber-Eats-Product-Case-Study",
+    
+    // Hero section
+    heroImage: "/Portfolio/UberCase.jpeg",
+    overview: "Comprehensive strategic initiative to grow Uber Eats from 23% to 33-35% market share, closing the gap with DoorDash through driver trust restoration, AI-powered delivery optimization, and ecosystem leverage. Projected to add $10B+ incremental annual revenue.",
+    
+    // Detailed problem statement
+    problem: {
+      title: "The Market Share Challenge",
+      description: "Uber Eats trails DoorDash by 2.4x in market share (23% vs 56%) despite making $4.9B quarterly revenue. The platform struggles with driver trust, slow delivery times, and underutilized ecosystem advantages.",
+      painPoints: [
+        "DoorDash controls 56% market share while Uber Eats has only 23%",
+        "Driver trust crisis - tip baiting and confusing pay structure driving 18% monthly quit rate",
+        "Slow delivery times - 38 minutes average vs DoorDash's 26 minutes (12-minute gap)",
+        "Contaminated driver experience - scheduling issues and login problems",
+        "Customer frustration with unpredictable delivery times and refund difficulties",
+        "Growing revenue but flat market share - not converting growth into competitive wins",
+        "Underutilized Uber Rides ecosystem - 40M daily rides not connected to food delivery",
+        "Limited category expansion compared to DoorDash's multi-category dominance"
+      ]
+    },
+    
+    // Detailed solution
+    solution: {
+      title: "Three Breakthrough Solutions",
+      description: "Comprehensive strategy built on driver fairness, AI-powered timing optimization, and ecosystem integration to achieve market leadership in 18 months.",
+      phases: [
+        {
+          name: "Foundation Phase",
+          duration: "Months 1-6",
+          focus: "Driver trust restoration and basic infrastructure",
+          deliverables: [
+            "Driver Fairness Shield - AI-powered tip protection and guaranteed earnings",
+            "Good Customer Badge system to identify reliable tippers",
+            "Tip Lock Timer - 60-minute window with reason requirement",
+            "Transparent earnings receipt after every delivery",
+            "Driver Advisory Board for continuous feedback"
+          ]
+        },
+        {
+          name: "Optimization Phase",
+          duration: "Months 7-12",
+          focus: "AI-powered delivery speed and efficiency",
+          deliverables: [
+            "Perfect Timing Engine - Restaurant Ready Predictor using ML",
+            "Smart driver positioning before rush hours",
+            "Multi-order route optimization with driver choice",
+            "Delivery time reduction from 38 to 30-32 minutes",
+            "Real-time feedback loop for continuous improvement"
+          ]
+        },
+        {
+          name: "Ecosystem Phase",
+          duration: "Months 13-18",
+          focus: "Uber ecosystem integration and category expansion",
+          deliverables: [
+            "Ride-to-Dinner connection - post-ride food ordering",
+            "AI Shopping Assistant with predictive ordering",
+            "Uber One Complete bundle at $19.99/month",
+            "Multi-category expansion (groceries, pharmacy, alcohol)",
+            "35M subscription target with 3x order frequency"
+          ]
+        }
+      ]
+    },
+    
+    // Key metrics
+    impact: {
+      marketShare: "23% → 33-35%",
+      revenue: "+$10B annual",
+      deliveryTime: "38min → 30min",
+      driverChurn: "18% → 12%",
+      users: "50M+",
+      subscribers: "20M → 35M",
+      conversion: "+35%",
+      roi: "541% (Year 1)"
+    },
+    
+    // Detailed modules
+    modules: [
+      {
+        name: "Driver Fairness Shield",
+        description: "AI-powered trust system with guaranteed earnings, tip protection, and transparent pay structure to restore driver confidence and reduce churn.",
+        technologies: ["Python", "TensorFlow", "Redis", "ML Models", "Analytics"],
+        challenges: [
+          "Tip baiting causing driver trust crisis and 18% monthly churn",
+          "Confusing pay structure with unpredictable earnings",
+          "Customers removing tips hours after delivery without accountability"
+        ],
+        solutions: [
+          "Built AI model predicting customer tip reliability with badge system",
+          "Implemented guaranteed minimum earnings with Uber covering tip removals",
+          "Created 60-minute tip lock with required reason and verification",
+          "Designed transparent earnings receipt showing all pay components"
+        ],
+        outcomes: [
+          "Driver churn reduced from 18% to 12% (6 percentage points)",
+          "Drivers work 15% more hours due to restored trust",
+          "4% more orders during peak times = $320M annual revenue",
+          "Driver satisfaction up 40% in pilot markets"
+        ]
+      },
+      {
+        name: "Perfect Timing Engine",
+        description: "AI-powered dispatch system that predicts restaurant preparation times and optimizes driver positioning to eliminate wait times and reduce delivery duration.",
+        technologies: ["Machine Learning", "Python", "Kafka", "Redis", "GPS APIs"],
+        challenges: [
+          "Drivers arriving before food ready, causing unpaid wait times",
+          "38-minute average delivery vs DoorDash's 26 minutes",
+          "Inefficient multi-order routing frustrating drivers and customers"
+        ],
+        solutions: [
+          "Built Restaurant Ready Predictor learning prep times per dish/restaurant",
+          "Implemented smart driver positioning before rush hour spikes",
+          "Created driver-choice route optimization for multi-order deliveries",
+          "Real-time adjustment based on traffic and restaurant delays"
+        ],
+        outcomes: [
+          "Delivery time reduced from 38 to 30-32 minutes (matching DoorDash)",
+          "20% faster delivery = 7% more orders per customer monthly",
+          "504M additional orders annually = $3.3B new revenue",
+          "Driver earnings up $2.30-$2.65 per mile with better routing"
+        ]
+      },
+      {
+        name: "One App For Everything Strategy",
+        description: "Ecosystem integration connecting Uber Rides with food delivery, AI shopping assistant, and super bundle subscription to create multi-category platform.",
+        technologies: ["React Native", "Gemini AI", "Payment APIs", "Analytics", "CRM"],
+        challenges: [
+          "40M daily Uber rides not connected to food ordering",
+          "Users see Uber Eats as 'food only' vs DoorDash's multi-category",
+          "Uber One subscription underutilized despite 61% adoption rate"
+        ],
+        solutions: [
+          "Built Ride-to-Dinner connection with 20% off post-ride orders",
+          "Created AI Shopping Assistant predicting needs before users know",
+          "Launched Uber One Complete at $19.99 with unlimited free delivery",
+          "Integrated groceries, pharmacy, alcohol, and convenience categories"
+        ],
+        outcomes: [
+          "10% of dinner-time riders order food = 36M monthly orders",
+          "$15B annual order value from ride integration = $2.85B revenue",
+          "35M subscribers (from 20M) = $3.6B subscription revenue",
+          "Subscribers order 3x more often creating massive GMV increase"
+        ]
+      }
+    ],
+    
+    // Technologies
+    technologies: [
+      "Python", "TensorFlow", "Machine Learning", "Redis", "Kafka",
+      "React Native", "Gemini AI", "GPS APIs", "Analytics", "Payment APIs",
+      "A/B Testing", "Real-time Processing", "Mobile SDKs", "Cloud Infrastructure"
+    ],
+    
+    // Technical challenge
+    technicalChallenge: {
+      problem: "Restoring driver trust while simultaneously improving delivery speed and integrating ecosystem - all without massive infrastructure overhaul or unsustainable costs",
+      details: [
+        "Driver churn at 18% monthly due to tip baiting and pay confusion",
+        "12-minute delivery time gap with DoorDash hurting competitiveness",
+        "40M daily Uber rides completely disconnected from food delivery",
+        "Needed to balance driver guarantees with profitability",
+        "Required real-time ML predictions at scale for 50M+ users"
+      ],
+      approach: [
+        "AI Trust Layer: Built lightweight tip prediction model over existing payment system",
+        "Smart Dispatch: Created restaurant prep time predictor without rebuilding core dispatch",
+        "Ecosystem Bridge: Connected Uber Rides and Eats through unified app experience",
+        "Phased Rollout: Tested in Miami and Phoenix before national launch",
+        "Cost Management: Driver guarantees funded by reliability fees on bad actors"
+      ],
+      results: [
+        "Reduced driver churn by 6 percentage points saving recruitment costs",
+        "Closed delivery time gap from 12 minutes to 6-8 minutes",
+        "Connected 40M daily rides to food ordering funnel",
+        "Achieved 541% ROI in Year 1 ($503M profit on $93M investment)",
+        "Scaled to national deployment in 12 months"
+      ]
+    },
+    
+    // Key decisions
+    keyDecisions: [
+      {
+        decision: "Driver-First Approach",
+        rationale: "Without drivers, there's no delivery. Restoring trust was prerequisite for all other improvements. Happy drivers = faster delivery = happy customers = more orders.",
+        impact: "Driver churn reduction enabled 4% more peak-time capacity = $320M annual revenue"
+      },
+      {
+        decision: "AI Overlay vs Rebuild",
+        rationale: "Building prediction layers over existing systems reduced timeline from 24+ months to 12 months while achieving 80% of value with 20% of cost.",
+        impact: "Faster time-to-market and preserved existing infrastructure investments"
+      },
+      {
+        decision: "Ecosystem Lock-In Strategy",
+        rationale: "DoorDash can't replicate Uber Rides integration. Leveraging 40M daily rides creates defensible competitive moat and multi-touchpoint habit formation.",
+        impact: "Ride-to-dinner conversion alone projected to add $2.85B annual revenue"
+      },
+      {
+        decision: "Uber One Complete Bundle",
+        rationale: "Subscribers order 3x more often and never switch platforms. Making subscription irresistibly valuable ($22 saved for $20 cost) drives lock-in and volume.",
+        impact: "Target 35M subscribers = $3.6B subscription revenue + massive GMV increase"
+      }
+    ],
+    
+    // Lessons learned
+    lessonsLearned: [
+      "Trust is the foundation - without driver and customer trust, no optimization matters",
+      "Speed wins customers - 12-minute delivery gap was bleeding market share daily",
+      "Ecosystem advantages only matter if activated - 40M rides were wasted opportunity",
+      "Transparency builds loyalty - clear earnings and delivery times reduce frustration",
+      "AI should augment, not replace - prediction layers over existing systems faster than rebuilds",
+      "Subscriptions create lock-in - Uber One Complete makes switching to DoorDash irrational",
+      "Different beats better - leveraging unique Uber Rides advantage vs copying DoorDash"
+    ]
   }
 
 };

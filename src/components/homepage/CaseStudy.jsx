@@ -5,6 +5,17 @@ import Heading from "../ui/Heading";
 const caseStudies = [
   {
     id: 1,
+    slug: "uber-eats-strategy",
+    title: "Uber Eats Product Case Study: How to Win the Food Delivery War",
+    subtitle: "A Fresh Strategy for 2026 to Close the Gap with DoorDash",
+    type: "Product Strategy • AI/ML • Operations • Ecosystem Integration",
+    year: "2026",
+    tools: ["Python", "TensorFlow", "Machine Learning", "Redis", "Kafka", "React Native"],
+    image: "/Portfolio/UberCase.jpeg",
+    featured: true
+  },
+  {
+    id: 2,
     slug: "youtube-music-growth-strategy",
     title: "Growing YouTube Music: A Strategic Path to Market Leadership",
     subtitle: "Closing the Gap with Spotify Through Innovation & Ecosystem Leverage",
@@ -15,7 +26,7 @@ const caseStudies = [
     featured: true
   },
   {
-    id: 2,
+    id: 3,
     slug: "spotify-discovery-platform",
     title: "Breaking the Echo Chamber: Spotify's Music Discovery Revolution",
     subtitle: "Solving Music Discovery Staleness Through User-Controlled Personalization",
@@ -26,7 +37,7 @@ const caseStudies = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     slug: "ai-personalization-platform",
     title: "AI-Driven Personalization & Agentic Decision Platform",
     subtitle: "Transforming E-commerce Through Intelligent Automation",
@@ -37,7 +48,7 @@ const caseStudies = [
     featured: true
   },
   {
-    id: 4,
+    id: 5,
     slug: "financial-portfolio-platform",
     title: "Financial Portfolio Insights & ESG Analytics Platform", 
     subtitle: "Revolutionizing Wealth Management Through Data Intelligence",

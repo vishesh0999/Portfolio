@@ -5,17 +5,6 @@ import Heading from "../ui/Heading";
 const caseStudies = [
   {
     id: 1,
-    slug: "uber-eats-strategy",
-    title: "Uber Eats Product Case Study: How to Win the Food Delivery War",
-    subtitle: "A Fresh Strategy for 2026 to Close the Gap with DoorDash",
-    type: "Product Strategy • AI/ML • Operations • Ecosystem Integration",
-    year: "2026",
-    tools: ["Python", "TensorFlow", "Machine Learning", "Redis", "Kafka", "React Native"],
-    image: "/Portfolio/UberCase.jpeg",
-    featured: true
-  },
-  {
-    id: 2,
     slug: "creditwise-score-roadmap",
     title: "CreditWise Score Roadmap: Empowering Financial Health",
     subtitle: "A Data-Driven Approach to Credit Score Improvement",
@@ -23,6 +12,17 @@ const caseStudies = [
     year: "2026",
     tools: ["Python", "TensorFlow", "React", "PostgreSQL", "ML", "Data Analytics"],
     image: "/Portfolio/Capitalone.jpeg",
+    featured: true
+  },
+  {
+    id: 2,
+    slug: "uber-eats-strategy",
+    title: "Uber Eats Product Case Study: How to Win the Food Delivery War",
+    subtitle: "A Fresh Strategy for 2026 to Close the Gap with DoorDash",
+    type: "Product Strategy • AI/ML • Operations • Ecosystem Integration",
+    year: "2026",
+    tools: ["Python", "TensorFlow", "Machine Learning", "Redis", "Kafka", "React Native"],
+    image: "/Portfolio/UberCase.jpeg",
     featured: true
   },
   {

@@ -16,6 +16,17 @@ const caseStudies = [
   },
   {
     id: 2,
+    slug: "creditwise-score-roadmap",
+    title: "CreditWise Score Roadmap: Empowering Financial Health",
+    subtitle: "A Data-Driven Approach to Credit Score Improvement",
+    type: "FinTech • Data Product • ML Product Management • Behavioral Design",
+    year: "2026",
+    tools: ["Python", "TensorFlow", "React", "PostgreSQL", "ML", "Data Analytics"],
+    image: "/Portfolio/Capitalone.jpeg",
+    featured: true
+  },
+  {
+    id: 3,
     slug: "youtube-music-growth-strategy",
     title: "Growing YouTube Music: A Strategic Path to Market Leadership",
     subtitle: "Closing the Gap with Spotify Through Innovation & Ecosystem Leverage",
@@ -26,7 +37,7 @@ const caseStudies = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     slug: "spotify-discovery-platform",
     title: "Breaking the Echo Chamber: Spotify's Music Discovery Revolution",
     subtitle: "Solving Music Discovery Staleness Through User-Controlled Personalization",
@@ -37,7 +48,7 @@ const caseStudies = [
     featured: true
   },
   {
-    id: 4,
+    id: 5,
     slug: "ai-personalization-platform",
     title: "AI-Driven Personalization & Agentic Decision Platform",
     subtitle: "Transforming E-commerce Through Intelligent Automation",
@@ -48,7 +59,7 @@ const caseStudies = [
     featured: true
   },
   {
-    id: 5,
+    id: 6,
     slug: "financial-portfolio-platform",
     title: "Financial Portfolio Insights & ESG Analytics Platform", 
     subtitle: "Revolutionizing Wealth Management Through Data Intelligence",

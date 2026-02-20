@@ -1021,6 +1021,267 @@ export const detailedCaseStudyData = {
       "Subscriptions create lock-in - Uber One Complete makes switching to DoorDash irrational",
       "Different beats better - leveraging unique Uber Rides advantage vs copying DoorDash"
     ]
+  },
+  
+  "creditwise-score-roadmap": {
+    id: 6,
+    title: "CreditWise Score Roadmap: Empowering Financial Health",
+    subtitle: "A Data-Driven Approach to Credit Score Improvement",
+    company: "CreditWise",
+    duration: "12 months",
+    team: "Cross-functional team of 15 (data science, product, engineering, compliance)",
+    role: "Senior Product Manager",
+    status: "Production - 85K+ Users",
+    platform: "Web & Mobile App",
+    
+    // Links
+    presentationLink: "/Portfolio/Capitalone.pdf",
+    caseStudyFileLink: "/Portfolio/CreditWise.md",
+    githubLink: "https://github.com/vishesh0999/CreditWise-Score-Roadmap",
+    
+    // Hero section
+    heroImage: "/Portfolio/Capitalone.jpeg",
+    overview: "Led the development of CreditWise, a personalized credit score improvement platform that achieved 58-point average score improvements for 85,000+ users through data-driven roadmaps, ML-powered recommendations, and behavioral insights. Achieved 72% success rate in helping users improve scores by 50+ points within 6 months.",
+    
+    // Detailed problem statement
+    problem: {
+      title: "The Credit Score Challenge",
+      description: "Over 60% of adults cannot correctly identify factors affecting their credit score, leading to uninformed financial decisions. Existing credit monitoring tools provide scores but fail to offer actionable, individualized improvement steps.",
+      painPoints: [
+        "60% of adults lack understanding of credit score factors",
+        "Existing tools only report scores without actionable guidance",
+        "Delayed feedback loops frustrate users (45-day average to see improvements)",
+        "Information overload from generic financial advice",
+        "Psychological barriers: procrastination, fear, lack of motivation",
+        "Poor credit impacts: 3-10% higher interest rates, limited housing options",
+        "29% of employers conduct credit checks affecting employment",
+        "20-50% higher insurance premiums for lower credit scores"
+      ]
+    },
+    
+    // Detailed solution
+    solution: {
+      title: "5-Phase Roadmap Framework",
+      description: "Built a comprehensive ML-powered platform providing personalized credit improvement roadmaps through a systematic 5-phase approach: Assess, Plan, Act, Monitor, and Optimize.",
+      phases: [
+        {
+          name: "Phase 1: ASSESS",
+          duration: "Week 1-2",
+          focus: "Comprehensive credit profile analysis",
+          deliverables: [
+            "Credit score pull from all three bureaus",
+            "Error identification and dispute priorities",
+            "Key metrics calculation (utilization, payment history)",
+            "Baseline score establishment",
+            "Financial literacy assessment"
+          ]
+        },
+        {
+          name: "Phase 2: PLAN",
+          duration: "Week 2-4",
+          focus: "Personalized roadmap generation",
+          deliverables: [
+            "Prioritized actions by impact-to-effort ratio",
+            "Short-term (3 month) and long-term (12 month) goals",
+            "Budget alignment strategy",
+            "Accountability checkpoints",
+            "Milestone calendar"
+          ]
+        },
+        {
+          name: "Phase 3: ACT",
+          duration: "Month 1-6",
+          focus: "Execute improvement actions",
+          deliverables: [
+            "Dispute filing for identified errors",
+            "Payment automation implementation",
+            "Debt reduction strategy execution",
+            "Credit limit increase requests",
+            "Action tracking dashboard"
+          ]
+        },
+        {
+          name: "Phase 4: MONITOR",
+          duration: "Ongoing",
+          focus: "Real-time tracking and alerts",
+          deliverables: [
+            "Score changes across all bureaus",
+            "Utilization trend monitoring",
+            "Anomaly alerts for sudden drops",
+            "Monthly progress reports",
+            "Trend analysis visualizations"
+          ]
+        },
+        {
+          name: "Phase 5: OPTIMIZE",
+          duration: "Month 6+",
+          focus: "Advanced optimization and maintenance",
+          deliverables: [
+            "Fine-tuned strategies based on results",
+            "Advanced optimization techniques",
+            "Financial milestone planning",
+            "Long-term credit protection setup",
+            "Maintenance mode transition"
+          ]
+        }
+      ]
+    },
+    
+    // Key metrics
+    impact: {
+      users: "85K+",
+      avgImprovement: "+58 points",
+      successRate: "72%",
+      disputeSuccess: "83%",
+      retention: "68% (6mo)",
+      literacyGain: "+34%",
+      engagement: "78% correlation",
+      roi: "$85 LTV"
+    },
+    
+    // Detailed modules
+    modules: [
+      {
+        name: "ML-Powered Recommendation Engine",
+        description: "Advanced machine learning system using collaborative filtering, content-based filtering, and reinforcement learning to provide personalized credit improvement recommendations.",
+        technologies: ["Python", "TensorFlow", "scikit-learn", "PostgreSQL", "MongoDB"],
+        challenges: [
+          "Proprietary credit scoring models requiring reverse-engineering",
+          "Cross-bureau data inconsistencies",
+          "Real-time personalization for 85K+ users",
+          "Balancing multiple credit factors with different weights"
+        ],
+        solutions: [
+          "Built hybrid ML model combining collaborative and content-based filtering",
+          "Implemented reinforcement learning for continuous improvement",
+          "Created data normalization layer for cross-bureau consistency",
+          "Developed impact-to-effort scoring for action prioritization"
+        ],
+        outcomes: [
+          "72% of users achieved 50+ point improvement in 6 months",
+          "Average improvement of 58 points for active users",
+          "83% error dispute success rate",
+          "Strong engagement correlation (r=0.78) with improvement"
+        ]
+      },
+      {
+        name: "Credit Factor Analysis System",
+        description: "Comprehensive analysis engine breaking down the 5 key credit score factors with real-time impact simulation and personalized optimization strategies.",
+        technologies: ["Python", "React.js", "D3.js", "Redis", "AWS"],
+        challenges: [
+          "Payment history (35% impact) - tracking on-time payment patterns",
+          "Credit utilization (30% impact) - optimizing usage across accounts",
+          "Credit history length (15% impact) - account age management",
+          "Credit mix (10% impact) - diversification strategies",
+          "New inquiries (10% impact) - application timing optimization"
+        ],
+        solutions: [
+          "Built payment automation with 99.2% on-time rate",
+          "Created utilization sweet spot targeting (1-9% optimal range)",
+          "Developed account age protection warnings",
+          "Implemented credit mix gap analysis",
+          "Built inquiry impact calculator with rate shopping guidance"
+        ],
+        outcomes: [
+          "Payment automation users: +67 points vs +31 manual",
+          "Utilization optimization: +42 points average impact",
+          "Error disputes: +25 points average improvement",
+          "79% of users had at least one correctable error"
+        ]
+      },
+      {
+        name: "User Persona Segmentation",
+        description: "Data-driven user segmentation creating 4 distinct personas with tailored roadmaps: Fresh Starter, Rebuilder, Optimizer, and Maintainer.",
+        technologies: ["Python", "Cluster Analysis", "NLP", "Behavioral Analytics"],
+        challenges: [
+          "Fresh Starter (300-579): No credit history, limited understanding",
+          "Rebuilder (580-669): Past setbacks, multiple collections",
+          "Optimizer (670-739): Good history, wants premium products",
+          "Maintainer (740-850): Excellent score, fraud protection focus"
+        ],
+        solutions: [
+          "Fresh Starter: Secured cards, authorized user strategy, history building",
+          "Rebuilder: Collection negotiation, debt repayment, goodwill adjustments",
+          "Optimizer: Utilization <10%, credit mix diversification, limit increases",
+          "Maintainer: Fraud alerts, credit freezes, portfolio optimization"
+        ],
+        outcomes: [
+          "Personalized roadmaps increased completion rate by 45%",
+          "Persona-specific content improved engagement by 34%",
+          "Tailored strategies reduced time-to-improvement by 30%",
+          "User satisfaction scores increased by 52%"
+        ]
+      }
+    ],
+    
+    // Technologies
+    technologies: [
+      "Python", "TensorFlow", "scikit-learn", "React.js", "Django",
+      "PostgreSQL", "MongoDB", "Redis", "AWS", "D3.js",
+      "Machine Learning", "NLP", "Data Analytics", "OAuth 2.0", "SOC 2"
+    ],
+    
+    // Technical challenge
+    technicalChallenge: {
+      problem: "Building accurate personalized recommendations despite proprietary credit scoring models, cross-bureau inconsistencies, and 30-day data latency while maintaining user engagement",
+      details: [
+        "Credit scoring algorithms are proprietary requiring reverse-engineering",
+        "Different bureaus report different information for same user",
+        "Credit data updates vary from real-time to 30+ days creating monitoring gaps",
+        "32% user engagement drop-off after first month",
+        "Only 45% of recommended actions completed by users",
+        "Processing personalized recommendations for 85K+ users at scale"
+      ],
+      approach: [
+        "Hybrid ML Architecture: Combined collaborative filtering with content-based recommendations",
+        "Data Normalization Layer: Built cross-bureau consistency framework",
+        "Behavioral Nudges: Implemented gamification and smart notifications",
+        "Impact Simulation: Created real-time score impact calculator",
+        "Engagement Optimization: Used reinforcement learning for notification timing"
+      ],
+      results: [
+        "Achieved 58-point average improvement exceeding 50-point target",
+        "72% success rate surpassing 70% goal",
+        "Reduced time-to-first-improvement from 60 to 45 days",
+        "68% retention rate at 6 months",
+        "Strong engagement-improvement correlation (r=0.78)"
+      ]
+    },
+    
+    // Key decisions
+    keyDecisions: [
+      {
+        decision: "5-Phase Framework vs. Continuous Approach",
+        rationale: "Structured phases provide clear milestones and reduce user overwhelm. Research showed users need defined stages to maintain motivation and track progress effectively.",
+        impact: "Increased action completion rate from 28% to 45% and improved user confidence by 67%"
+      },
+      {
+        decision: "Payment Automation as Priority #1",
+        rationale: "Payment history accounts for 35% of score. Data showed automated payments achieved 99.2% on-time rate vs 87.3% manual, resulting in 23% higher improvement.",
+        impact: "Users with automation averaged +67 points vs +31 for manual payments"
+      },
+      {
+        decision: "Utilization Sweet Spot (1-9%)",
+        rationale: "Analysis revealed 1-9% utilization yielded +42 point impact vs +28 for 10-29% range. Zero utilization actually decreased scores by 5 points.",
+        impact: "Utilization optimization alone contributed +42 points average improvement"
+      },
+      {
+        decision: "Error Dispute Prioritization",
+        rationale: "79% of users had errors on reports. Successful disputes averaged +25 points with 83% success rate, providing quick wins to build momentum.",
+        impact: "Error corrections provided early confidence boost and 25-point average improvement"
+      }
+    ],
+    
+    // Lessons learned
+    lessonsLearned: [
+      "Personalization is paramount - one-size-fits-all advice fails; tailored roadmaps yield significantly better outcomes",
+      "Automation accelerates results - users who automate payments see 2x faster improvements",
+      "Education drives empowerment - 34% financial literacy improvement correlates with sustained behavior change",
+      "Engagement predicts success - strongest predictor of improvement is consistent platform engagement (r=0.78)",
+      "Small actions compound - multiple small credit-positive actions often exceed impact of single major change",
+      "Quick wins matter - early successes (error disputes) build momentum for long-term commitment",
+      "Behavioral design critical - gamification and smart nudges reduce 32% drop-off rate"
+    ]
   }
 
 };

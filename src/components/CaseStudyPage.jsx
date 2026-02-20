@@ -4,6 +4,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Helmet } from "react-helmet-async";
 import { detailedCaseStudyData } from "../data/caseStudyData";
+import { 
+  CreditWiseSystemArchitecture, 
+  CreditWiseUserJourney, 
+  CreditWiseMLPipeline,
+  UberEatsEcosystemFlow,
+  UberEatsDeliveryOptimization
+} from "./ui/ProfessionalDiagrams";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -342,6 +349,414 @@ export default function CaseStudyPage() {
             </div>
           </div>
         </section>
+
+        {/* Workflow & Diagrams Section */}
+        {(slug === "creditwise-score-roadmap" || slug === "uber-eats-strategy") && (
+        <section className="py-20 bg-white animate-section">
+          <div className="max-w-7xl mx-auto px-5">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-grotesk font-bold text-gray-900 mb-6 flex items-center justify-center">
+                <svg className="w-12 h-12 mr-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                Workflow & Process Diagrams
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                Visual representation of the implementation process and data flow
+              </p>
+            </div>
+
+            {/* CreditWise Specific Diagrams */}
+            {slug === "creditwise-score-roadmap" && (
+              <div className="space-y-16">
+                {/* 5-Phase Roadmap Flow */}
+                <div className="bg-secondary-100 rounded-3xl p-8 md:p-12 border border-gray-200">
+                  <h3 className="text-2xl font-grotesk font-bold text-gray-900 mb-8 text-center">
+                    5-Phase Roadmap Framework
+                  </h3>
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                    {['ASSESS', 'PLAN', 'ACT', 'MONITOR', 'OPTIMIZE'].map((phase, index) => (
+                      <div key={phase} className="flex items-center">
+                        <div className="flex flex-col items-center">
+                          <div className="w-24 h-24 bg-accent-400 rounded-full flex items-center justify-center text-white font-grotesk font-bold text-lg shadow-xl">
+                            {index + 1}
+                          </div>
+                          <div className="mt-4 text-center">
+                            <div className="font-grotesk font-bold text-gray-900 text-lg">{phase}</div>
+                            <div className="text-sm text-gray-600 mt-1">
+                              {index === 0 && 'Week 1-2'}
+                              {index === 1 && 'Week 2-4'}
+                              {index === 2 && 'Month 1-6'}
+                              {index === 3 && 'Ongoing'}
+                              {index === 4 && 'Month 6+'}
+                            </div>
+                          </div>
+                        </div>
+                        {index < 4 && (
+                          <svg className="hidden md:block w-12 h-12 text-gray-400 mx-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* System Architecture */}
+                <div className="bg-secondary-100 rounded-3xl p-8 md:p-12 border border-gray-200">
+                  <h3 className="text-2xl font-grotesk font-bold text-gray-900 mb-8 text-center">
+                    System Architecture & Data Flow
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+                    {/* Data Sources */}
+                    <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-300">
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                          </svg>
+                        </div>
+                        <h4 className="font-grotesk font-bold text-gray-900 mb-2">Data Sources</h4>
+                        <p className="text-xs text-gray-600">Credit Bureaus, User Input, Financial Data</p>
+                      </div>
+                    </div>
+
+                    {/* ETL Pipeline */}
+                    <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-300">
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                          </svg>
+                        </div>
+                        <h4 className="font-grotesk font-bold text-gray-900 mb-2">ETL Pipeline</h4>
+                        <p className="text-xs text-gray-600">Data Processing & Transformation</p>
+                      </div>
+                    </div>
+
+                    {/* ML Models */}
+                    <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-accent-400">
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-accent-400 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                          </svg>
+                        </div>
+                        <h4 className="font-grotesk font-bold text-gray-900 mb-2">ML Models</h4>
+                        <p className="text-xs text-gray-600">TensorFlow, Recommendation Engine</p>
+                      </div>
+                    </div>
+
+                    {/* API Layer */}
+                    <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-300">
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                        <h4 className="font-grotesk font-bold text-gray-900 mb-2">API Layer</h4>
+                        <p className="text-xs text-gray-600">RESTful APIs, Django Backend</p>
+                      </div>
+                    </div>
+
+                    {/* User Interface */}
+                    <div className="bg-white rounded-xl p-6 shadow-lg border-2 border-gray-300">
+                      <div className="text-center">
+                        <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white mx-auto mb-3">
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                          </svg>
+                        </div>
+                        <h4 className="font-grotesk font-bold text-gray-900 mb-2">User Interface</h4>
+                        <p className="text-xs text-gray-600">React.js, Mobile & Web</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* User Journey Flow */}
+                <div className="bg-secondary-100 rounded-3xl p-8 md:p-12 border border-gray-200">
+                  <h3 className="text-2xl font-grotesk font-bold text-gray-900 mb-8 text-center">
+                    User Journey & Engagement Flow
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div className="bg-white rounded-xl p-6 shadow-lg">
+                      <div className="w-10 h-10 bg-accent-400 rounded-full flex items-center justify-center text-white font-bold mb-4">1</div>
+                      <h4 className="font-grotesk font-bold text-gray-900 mb-2">Onboarding</h4>
+                      <p className="text-sm text-gray-600">User signs up, connects credit bureaus, completes profile</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-6 shadow-lg">
+                      <div className="w-10 h-10 bg-accent-400 rounded-full flex items-center justify-center text-white font-bold mb-4">2</div>
+                      <h4 className="font-grotesk font-bold text-gray-900 mb-2">Assessment</h4>
+                      <p className="text-sm text-gray-600">AI analyzes credit profile, identifies errors and opportunities</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-6 shadow-lg">
+                      <div className="w-10 h-10 bg-accent-400 rounded-full flex items-center justify-center text-white font-bold mb-4">3</div>
+                      <h4 className="font-grotesk font-bold text-gray-900 mb-2">Action</h4>
+                      <p className="text-sm text-gray-600">User executes personalized recommendations with guidance</p>
+                    </div>
+                    <div className="bg-white rounded-xl p-6 shadow-lg">
+                      <div className="w-10 h-10 bg-accent-400 rounded-full flex items-center justify-center text-white font-bold mb-4">4</div>
+                      <h4 className="font-grotesk font-bold text-gray-900 mb-2">Results</h4>
+                      <p className="text-sm text-gray-600">Track improvements, celebrate milestones, optimize strategy</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Impact Metrics Visualization */}
+                <div className="bg-secondary-100 rounded-3xl p-8 md:p-12 border border-gray-200">
+                  <h3 className="text-2xl font-grotesk font-bold text-gray-900 mb-8 text-center">
+                    Success Metrics Distribution
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="text-center">
+                      <div className="relative w-48 h-48 mx-auto mb-4">
+                        <svg className="w-full h-full transform -rotate-90">
+                          <circle cx="96" cy="96" r="80" fill="none" stroke="#e5e7eb" strokeWidth="16"/>
+                          <circle cx="96" cy="96" r="80" fill="none" stroke="#f59e0b" strokeWidth="16" strokeDasharray="502" strokeDashoffset="140" strokeLinecap="round"/>
+                        </svg>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="text-3xl font-grotesk font-bold text-gray-900">72%</div>
+                            <div className="text-sm text-gray-600">Success Rate</div>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 font-medium">Users achieving 50+ point improvement</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="relative w-48 h-48 mx-auto mb-4">
+                        <svg className="w-full h-full transform -rotate-90">
+                          <circle cx="96" cy="96" r="80" fill="none" stroke="#e5e7eb" strokeWidth="16"/>
+                          <circle cx="96" cy="96" r="80" fill="none" stroke="#10b981" strokeWidth="16" strokeDasharray="502" strokeDashoffset="85" strokeLinecap="round"/>
+                        </svg>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="text-3xl font-grotesk font-bold text-gray-900">83%</div>
+                            <div className="text-sm text-gray-600">Dispute Success</div>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 font-medium">Error disputes successfully resolved</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="relative w-48 h-48 mx-auto mb-4">
+                        <svg className="w-full h-full transform -rotate-90">
+                          <circle cx="96" cy="96" r="80" fill="none" stroke="#e5e7eb" strokeWidth="16"/>
+                          <circle cx="96" cy="96" r="80" fill="none" stroke="#3b82f6" strokeWidth="16" strokeDasharray="502" strokeDashoffset="160" strokeLinecap="round"/>
+                        </svg>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="text-3xl font-grotesk font-bold text-gray-900">68%</div>
+                            <div className="text-sm text-gray-600">Retention</div>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 font-medium">User retention at 6 months</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Uber Eats Specific Diagrams */}
+            {slug === "uber-eats-strategy" && (
+              <div className="space-y-16">
+                {/* 3 Breakthrough Solutions Flow */}
+                <div className="bg-secondary-100 rounded-3xl p-8 md:p-12 border border-gray-200">
+                  <h3 className="text-2xl font-grotesk font-bold text-gray-900 mb-8 text-center">
+                    Three Breakthrough Solutions Framework
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-white rounded-xl p-8 shadow-xl border-2 border-accent-400">
+                      <div className="w-16 h-16 bg-accent-400 rounded-full flex items-center justify-center text-white font-grotesk font-bold text-2xl mx-auto mb-6">1</div>
+                      <h4 className="font-grotesk font-bold text-gray-900 text-xl mb-4 text-center">Driver Fairness Shield</h4>
+                      <ul className="space-y-2 text-sm text-gray-700">
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          AI-powered tip protection
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          Guaranteed earnings
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          Customer trust badges
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          60-min tip lock timer
+                        </li>
+                      </ul>
+                      <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+                        <div className="text-2xl font-grotesk font-bold text-accent-400">$320M</div>
+                        <div className="text-sm text-gray-600">Annual Revenue Impact</div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white rounded-xl p-8 shadow-xl border-2 border-accent-400">
+                      <div className="w-16 h-16 bg-accent-400 rounded-full flex items-center justify-center text-white font-grotesk font-bold text-2xl mx-auto mb-6">2</div>
+                      <h4 className="font-grotesk font-bold text-gray-900 text-xl mb-4 text-center">Perfect Timing Engine</h4>
+                      <ul className="space-y-2 text-sm text-gray-700">
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          Restaurant ready predictor
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          Smart driver positioning
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          Multi-order optimization
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          38min → 30min delivery
+                        </li>
+                      </ul>
+                      <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+                        <div className="text-2xl font-grotesk font-bold text-accent-400">$3.3B</div>
+                        <div className="text-sm text-gray-600">Annual Revenue Impact</div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white rounded-xl p-8 shadow-xl border-2 border-accent-400">
+                      <div className="w-16 h-16 bg-accent-400 rounded-full flex items-center justify-center text-white font-grotesk font-bold text-2xl mx-auto mb-6">3</div>
+                      <h4 className="font-grotesk font-bold text-gray-900 text-xl mb-4 text-center">Ecosystem Integration</h4>
+                      <ul className="space-y-2 text-sm text-gray-700">
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          Ride-to-dinner connection
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          AI shopping assistant
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          Uber One Complete bundle
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-accent-400 mr-2">•</span>
+                          Multi-category expansion
+                        </li>
+                      </ul>
+                      <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+                        <div className="text-2xl font-grotesk font-bold text-accent-400">$6.45B</div>
+                        <div className="text-sm text-gray-600">Annual Revenue Impact</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Market Share Growth Visualization */}
+                <div className="bg-secondary-100 rounded-3xl p-8 md:p-12 border border-gray-200">
+                  <h3 className="text-2xl font-grotesk font-bold text-gray-900 mb-8 text-center">
+                    Market Share Growth Trajectory
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="bg-white rounded-xl p-8 shadow-lg">
+                      <h4 className="font-grotesk font-bold text-gray-900 mb-6 text-center">Current State</h4>
+                      <div className="space-y-4">
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-sm font-medium text-gray-700">DoorDash</span>
+                            <span className="text-sm font-bold text-gray-900">56%</span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-4">
+                            <div className="bg-red-500 h-4 rounded-full" style={{width: '56%'}}></div>
+                          </div>
+                        </div>
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-sm font-medium text-gray-700">Uber Eats</span>
+                            <span className="text-sm font-bold text-gray-900">23%</span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-4">
+                            <div className="bg-gray-400 h-4 rounded-full" style={{width: '23%'}}></div>
+                          </div>
+                        </div>
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-sm font-medium text-gray-700">Others</span>
+                            <span className="text-sm font-bold text-gray-900">21%</span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-4">
+                            <div className="bg-gray-300 h-4 rounded-full" style={{width: '21%'}}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white rounded-xl p-8 shadow-lg">
+                      <h4 className="font-grotesk font-bold text-gray-900 mb-6 text-center">Target State (18 months)</h4>
+                      <div className="space-y-4">
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-sm font-medium text-gray-700">DoorDash</span>
+                            <span className="text-sm font-bold text-gray-900">48%</span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-4">
+                            <div className="bg-red-500 h-4 rounded-full" style={{width: '48%'}}></div>
+                          </div>
+                        </div>
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-sm font-medium text-gray-700">Uber Eats</span>
+                            <span className="text-sm font-bold text-accent-400">33-35%</span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-4">
+                            <div className="bg-accent-400 h-4 rounded-full" style={{width: '35%'}}></div>
+                          </div>
+                        </div>
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-sm font-medium text-gray-700">Others</span>
+                            <span className="text-sm font-bold text-gray-900">17-19%</span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-4">
+                            <div className="bg-gray-300 h-4 rounded-full" style={{width: '18%'}}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Implementation Timeline */}
+                <div className="bg-secondary-100 rounded-3xl p-8 md:p-12 border border-gray-200">
+                  <h3 className="text-2xl font-grotesk font-bold text-gray-900 mb-8 text-center">
+                    18-Month Implementation Roadmap
+                  </h3>
+                  <div className="space-y-6">
+                    {[
+                      {phase: 'Foundation', months: 'Month 1-6', focus: 'Driver trust restoration', color: 'bg-blue-500'},
+                      {phase: 'Optimization', months: 'Month 7-12', focus: 'AI-powered delivery speed', color: 'bg-green-500'},
+                      {phase: 'Ecosystem', months: 'Month 13-18', focus: 'Uber ecosystem integration', color: 'bg-purple-500'}
+                    ].map((item, index) => (
+                      <div key={index} className="bg-white rounded-xl p-6 shadow-lg flex items-center">
+                        <div className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center text-white font-grotesk font-bold text-xl mr-6`}>
+                          {index + 1}
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex justify-between items-center mb-2">
+                            <h4 className="font-grotesk font-bold text-gray-900 text-lg">{item.phase} Phase</h4>
+                            <span className="text-sm font-medium text-gray-600">{item.months}</span>
+                          </div>
+                          <p className="text-gray-700">{item.focus}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+        )}
 
         {/* Technical Deep Dive */}
         {caseStudy.modules && caseStudy.modules.length > 0 && (

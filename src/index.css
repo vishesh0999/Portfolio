@@ -105,3 +105,79 @@
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
   }
 }
+
+
+/* Professional Mermaid Diagram Styling */
+.mermaid-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.mermaid {
+  font-family: 'Space Grotesk', sans-serif !important;
+  min-height: 400px;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mermaid node styling */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  stroke-width: 3px !important;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Mermaid edge styling */
+.mermaid .edgePath .path {
+  stroke-width: 2.5px !important;
+  stroke: #6b7280 !important;
+}
+
+/* Mermaid label styling */
+.mermaid .nodeLabel,
+.mermaid .edgeLabel {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+/* Subgraph styling */
+.mermaid .cluster rect {
+  fill: #f3f4f6 !important;
+  stroke: #d1d5db !important;
+  stroke-width: 2px !important;
+  rx: 12px !important;
+}
+
+.mermaid .cluster-label {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  fill: #1f2937 !important;
+}
+
+/* Sequence diagram styling */
+.mermaid .actor {
+  stroke: #3b82f6 !important;
+  fill: #dbeafe !important;
+  stroke-width: 3px !important;
+}
+
+.mermaid .messageLine0,
+.mermaid .messageLine1 {
+  stroke-width: 2px !important;
+}
+
+.mermaid .messageText {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.mermaid .note {
+  fill: #fef3c7 !important;
+  stroke: #f59e0b !important;
+  stroke-width: 2px !important;
+}

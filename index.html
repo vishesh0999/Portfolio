@@ -75,6 +75,17 @@
       "knowsAbout": ["React", "React Native", "JavaScript", "Web Development", "UI/UX Design"]
     }
     </script>
+    
+    <!-- SPA Redirect Handler for GitHub Pages -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>

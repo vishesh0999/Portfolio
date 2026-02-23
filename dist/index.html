@@ -75,7 +75,18 @@
       "knowsAbout": ["React", "React Native", "JavaScript", "Web Development", "UI/UX Design"]
     }
     </script>
-    <script type="module" crossorigin src="/assets/index-81ef34e1.js"></script>
+    
+    <!-- SPA Redirect Handler for GitHub Pages -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-fa7d5bd0.js"></script>
     <link rel="stylesheet" href="/assets/index-066d3bea.css">
   </head>
   <body>

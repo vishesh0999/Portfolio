@@ -11,7 +11,7 @@ const caseStudies = [
     type: "FinTech • Data Product • ML Product Management • Behavioral Design",
     year: "2026",
     tools: ["Python", "TensorFlow", "React", "PostgreSQL", "ML", "Data Analytics"],
-    image: "/Portfolio/Capitalone.jpeg",
+    image: "/Capitalone.jpeg",
     featured: true
   },
   {
@@ -22,7 +22,7 @@ const caseStudies = [
     type: "Product Strategy • AI/ML • Operations • Ecosystem Integration",
     year: "2026",
     tools: ["Python", "TensorFlow", "Machine Learning", "Redis", "Kafka", "React Native"],
-    image: "/Portfolio/UberCase.jpeg",
+    image: "/UberCase.jpeg",
     featured: true
   },
   {
@@ -33,7 +33,7 @@ const caseStudies = [
     type: "Product Strategy • Market Growth • Competitive Analysis",
     year: "2026",
     tools: ["Gemini AI", "Android", "Google Cloud", "A/B Testing", "Market Research", "Analytics"],
-    image: "/Portfolio/Youtube.jpeg",
+    image: "/Youtube.jpeg",
     featured: true
   },
   {
@@ -44,7 +44,7 @@ const caseStudies = [
     type: "Consumer Product • Algorithmic Systems • UX Innovation",
     year: "2026",
     tools: ["BaRT Algorithm", "Python", "TensorFlow", "Redis", "A/B Testing", "React", "ML"],
-    image: "/Portfolio/Sportify.jpeg",
+    image: "/Sportify.jpeg",
     featured: true
   },
   {
@@ -55,7 +55,7 @@ const caseStudies = [
     type: "AI Product Strategy • ML Product Management",
     year: "2024",
     tools: ["GPT-4", "Claude", "Gemini", "AWS SageMaker", "Vertex AI", "Python", "TensorFlow"],
-    image: "/Portfolio/Case1.jpg.jpeg",
+    image: "/Case1.jpg.jpeg",
     featured: true
   },
   {
@@ -66,7 +66,7 @@ const caseStudies = [
     type: "Data Product • Business Intelligence • RegTech",
     year: "2023",
     tools: ["Python", "SQL", "Tableau", "React", "ML Models", "GDPR", "MiFID II"],
-    image: "/Portfolio/Case2.jpeg",
+    image: "/Case2.jpeg",
     featured: true
   }
 ];

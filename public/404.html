@@ -6,13 +6,18 @@
     <title>Redirecting...</title>
     <script>
       // Single Page Apps for GitHub Pages
-      // https://github.com/rafgraph/spa-github-pages
-      // Store the path in sessionStorage and redirect to root
-      sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
-      location.replace('/');
+      // Only redirect if this is NOT an asset file
+      var path = location.pathname;
+      
+      // Don't redirect if it's an asset file (has file extension)
+      if (!path.match(/\.(js|css|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot|ico|json|xml|txt|pdf|md)$/i)) {
+        // Store the path in sessionStorage and redirect to root
+        sessionStorage.setItem('redirect', location.pathname + location.search + location.hash);
+        location.replace('/');
+      }
     </script>
   </head>
   <body>
-    Redirecting...
+    <p>Redirecting...</p>
   </body>
 </html>

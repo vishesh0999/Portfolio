@@ -56,7 +56,7 @@ export default function About({ forwardedRef }) {
               ref={profile}
               loading="lazy"
               className="w-full h-auto rounded-md object-cover object-center"
-              src="/Portfolio/pic.jpeg"
+              src="/pic.jpeg"
               width="480"
               height="640"
               alt="portrait image of Vishesh posing at an event"

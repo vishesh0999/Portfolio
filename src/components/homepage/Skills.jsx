@@ -12,7 +12,7 @@ const Skills = ({ forwardedRef }) => {
 
   const tools = [
     { name: 'ChatGPT', icon: 'https://img.icons8.com/color/96/chatgpt.png' },
-    { name: 'Claude', icon: '/Portfolio/icons/claude.svg' },
+    { name: 'Claude', icon: '/icons/claude.svg' },
     { name: 'RAG', icon: 'https://img.icons8.com/color/96/artificial-intelligence.png' },
     { name: 'Jira', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg' },
     { name: 'Confluence', icon: 'https://img.icons8.com/color/96/confluence--v2.png' },

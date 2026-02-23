@@ -189,7 +189,7 @@ export default function Contact({ forwardedRef }) {
               <div className="flex gap-4">
                 {/* View Resume */}
                 <a
-                  href="/Portfolio/Visheshkumar AI Product Manager.pdf"
+                  href="/Visheshkumar AI Product Manager.pdf"
                   className="group relative w-fit cursor-pointer"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -200,7 +200,7 @@ export default function Contact({ forwardedRef }) {
                 
                 {/* Download Resume */}
                 <a
-                  href="/Portfolio/Visheshkumar AI Product Manager.pdf"
+                  href="/Visheshkumar AI Product Manager.pdf"
                   download="Visheshkumar_AI_Product_Manager.pdf"
                   className="group relative w-fit cursor-pointer"
                 >

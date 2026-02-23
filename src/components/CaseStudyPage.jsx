@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Helmet } from "react-helmet-async";
 import { detailedCaseStudyData } from "../data/caseStudyData";
+import { CreditWiseArchitectureDiagram, UberEatsEcosystemDiagram } from "./ui/EnterpriseDiagrams";
 import { 
   CreditWiseSystemArchitecture, 
   CreditWiseUserJourney, 
@@ -369,6 +370,48 @@ export default function CaseStudyPage() {
             {/* CreditWise Specific Diagrams */}
             {slug === "creditwise-score-roadmap" && (
               <div className="space-y-16">
+                {/* Enterprise Architecture Diagram - React Flow */}
+                <div className="animate-section">
+                  <div className="mb-8">
+                    <h3 className="text-3xl font-grotesk font-bold text-gray-900 mb-4 flex items-center">
+                      <div className="w-10 h-10 bg-accent-400 rounded-lg flex items-center justify-center text-white font-bold mr-4">1</div>
+                      Enterprise System Architecture
+                    </h3>
+                    <p className="text-lg text-gray-600 ml-14">
+                      Interactive enterprise-grade architecture diagram showing complete data flow from credit bureaus through ML processing to user applications. Zoom and pan to explore each component.
+                    </p>
+                  </div>
+                  <CreditWiseArchitectureDiagram />
+                </div>
+
+                {/* Mermaid Diagrams */}
+                <div className="animate-section">
+                  <div className="mb-8">
+                    <h3 className="text-3xl font-grotesk font-bold text-gray-900 mb-4 flex items-center">
+                      <div className="w-10 h-10 bg-accent-400 rounded-lg flex items-center justify-center text-white font-bold mr-4">2</div>
+                      Complete User Journey Flow
+                    </h3>
+                    <p className="text-lg text-gray-600 ml-14">
+                      Detailed 5-phase user journey showing all touchpoints, decision nodes, and feedback loops from onboarding through continuous optimization.
+                    </p>
+                  </div>
+                  <CreditWiseUserJourney />
+                </div>
+
+                <div className="animate-section">
+                  <div className="mb-8">
+                    <h3 className="text-3xl font-grotesk font-bold text-gray-900 mb-4 flex items-center">
+                      <div className="w-10 h-10 bg-accent-400 rounded-lg flex items-center justify-center text-white font-bold mr-4">3</div>
+                      Machine Learning Pipeline
+                    </h3>
+                    <p className="text-lg text-gray-600 ml-14">
+                      End-to-end ML workflow from data collection through model deployment, including continuous retraining and monitoring systems.
+                    </p>
+                  </div>
+                  <CreditWiseMLPipeline />
+                </div>
+                
+                {/* Keep existing simple diagrams below for comparison */}
                 {/* 5-Phase Roadmap Flow */}
                 <div className="bg-secondary-100 rounded-3xl p-8 md:p-12 border border-gray-200">
                   <h3 className="text-2xl font-grotesk font-bold text-gray-900 mb-8 text-center">
@@ -563,6 +606,48 @@ export default function CaseStudyPage() {
             {/* Uber Eats Specific Diagrams */}
             {slug === "uber-eats-strategy" && (
               <div className="space-y-16">
+                {/* Enterprise Ecosystem Diagram - React Flow */}
+                <div className="animate-section">
+                  <div className="mb-8">
+                    <h3 className="text-3xl font-grotesk font-bold text-gray-900 mb-4 flex items-center">
+                      <div className="w-10 h-10 bg-accent-400 rounded-lg flex items-center justify-center text-white font-bold mr-4">1</div>
+                      Complete Ecosystem Architecture
+                    </h3>
+                    <p className="text-lg text-gray-600 ml-14">
+                      Interactive enterprise architecture showing integration of all three breakthrough solutions with backend infrastructure and ML layers. Zoom and pan to explore each component and data flow.
+                    </p>
+                  </div>
+                  <UberEatsEcosystemDiagram />
+                </div>
+
+                {/* Mermaid Sequence Diagram */}
+                <div className="animate-section">
+                  <div className="mb-8">
+                    <h3 className="text-3xl font-grotesk font-bold text-gray-900 mb-4 flex items-center">
+                      <div className="w-10 h-10 bg-accent-400 rounded-lg flex items-center justify-center text-white font-bold mr-4">2</div>
+                      Delivery Optimization Sequence Flow
+                    </h3>
+                    <p className="text-lg text-gray-600 ml-14">
+                      Detailed sequence diagram showing complete order-to-delivery flow with AI-powered optimization at each step, including feedback loops for continuous improvement.
+                    </p>
+                  </div>
+                  <UberEatsDeliveryOptimization />
+                </div>
+
+                <div className="animate-section">
+                  <div className="mb-8">
+                    <h3 className="text-3xl font-grotesk font-bold text-gray-900 mb-4 flex items-center">
+                      <div className="w-10 h-10 bg-accent-400 rounded-lg flex items-center justify-center text-white font-bold mr-4">3</div>
+                      Complete Ecosystem Flow
+                    </h3>
+                    <p className="text-lg text-gray-600 ml-14">
+                      End-to-end system diagram showing all touchpoints, backend services, and ML components with feedback loops.
+                    </p>
+                  </div>
+                  <UberEatsEcosystemFlow />
+                </div>
+
+                {/* Keep existing summary cards below */}
                 {/* 3 Breakthrough Solutions Flow */}
                 <div className="bg-secondary-100 rounded-3xl p-8 md:p-12 border border-gray-200">
                   <h3 className="text-2xl font-grotesk font-bold text-gray-900 mb-8 text-center">

@@ -176,8 +176,8 @@ export default function Hero() {
         {/* Download Resume Button */}
         <div className="flex justify-center mt-4">
           <a 
-            href="/Visheshkumar AI Product Manager.pdf" 
-            download="Visheshkumar_AI_Product_Manager.pdf"
+            href="/Vishesh_Prajapati_resume.pdf" 
+            download="Vishesh_Prajapati_resume.pdf"
             className="group relative bg-gradient-to-r from-accent-400 to-accent-300 hover:from-accent-500 hover:to-accent-400 border-2 border-accent-300 hover:border-accent-500 rounded-full px-6 py-3 transition-all duration-300 hover:scale-110 flex items-center gap-3 shadow-lg hover:shadow-xl shadow-accent-400/30 hover:shadow-accent-500/40"
           >
             {/* Glow effect */}

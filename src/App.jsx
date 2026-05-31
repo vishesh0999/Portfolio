@@ -10,6 +10,7 @@ import Hero from "./components/homepage/Hero";
 import About from "./components/homepage/About";
 import Experience from "./components/homepage/Experience";
 import Skills from "./components/homepage/Skills";
+import Certificates from "./components/homepage/Certificates";
 import Works from "./components/homepage/Works";
 import CaseStudy from "./components/homepage/CaseStudy";
 import Contact from "./components/homepage/Contact";
@@ -57,17 +58,49 @@ const HomePage = () => {
         <meta name="description" content={siteConfig.description} />
         <link rel="canonical" href={siteConfig.url} />
       </Helmet>
-      <div className="bg-black min-h-screen">
-        <NavBar sectionRefs={sectionRefs.current} />
-        <Hero />
-        <div className="bg-secondary-100">
+      <div className="min-h-screen relative bg-mesh">
+        {/* ── Scan line — sweeping light beam ────────────────────── */}
+        <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden" aria-hidden="true">
+          <div
+            className="absolute left-0 right-0 h-[1px]"
+            style={{
+              background: 'linear-gradient(90deg, transparent 0%, rgba(100,180,255,0.15) 20%, rgba(100,200,255,0.3) 50%, rgba(100,180,255,0.15) 80%, transparent 100%)',
+              boxShadow: '0 0 30px 10px rgba(100,180,255,0.05)',
+              animation: 'scanLine 12s linear infinite',
+            }}
+          />
+        </div>
+
+        {/* ── Ambient glow blobs ─────────────────────────────────── */}
+        <div className="fixed inset-0 z-[1] pointer-events-none" aria-hidden="true">
+          <div className="absolute top-[10%] left-[5%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] rounded-full opacity-[0.03]"
+            style={{
+              background: 'radial-gradient(circle, #3b82f6, transparent 70%)',
+              filter: 'blur(80px)',
+              animation: 'floatBlob1 20s ease-in-out infinite alternate',
+            }}
+          />
+          <div className="absolute bottom-[10%] right-[5%] w-[35vw] h-[35vw] max-w-[500px] max-h-[500px] rounded-full opacity-[0.025]"
+            style={{
+              background: 'radial-gradient(circle, #6366f1, transparent 70%)',
+              filter: 'blur(80px)',
+              animation: 'floatBlob2 18s ease-in-out infinite alternate',
+            }}
+          />
+        </div>
+
+        {/* ── Main content ───────────────────────────────────────── */}
+        <div className="relative z-10">
+          <NavBar sectionRefs={sectionRefs.current} />
+          <Hero />
           <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
             <About forwardedRef={(el) => (sectionRefs.current[0] = el)} />
             <CaseStudy forwardedRef={(el) => (sectionRefs.current[1] = el)} />
             <Experience forwardedRef={(el) => (sectionRefs.current[2] = el)} />
             <Skills forwardedRef={(el) => (sectionRefs.current[3] = el)} />
-            <Works forwardedRef={(el) => (sectionRefs.current[4] = el)} />
-            <Contact forwardedRef={(el) => (sectionRefs.current[5] = el)} />
+            <Certificates forwardedRef={(el) => (sectionRefs.current[4] = el)} />
+            <Works forwardedRef={(el) => (sectionRefs.current[5] = el)} />
+            <Contact forwardedRef={(el) => (sectionRefs.current[6] = el)} />
           </main>
           <Footer />
         </div>

@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row md:w-[62.5vw] lg:w-[57.5vw] justify-between">
         <div className="flex space-x-1">
           <span>2025</span>
-          <span className="font-extrabold uppercase 2xl:text-body-1">Vishesh Kumar</span>
+          <span className="font-extrabold uppercase 2xl:text-body-1">Vishesh Prajapati</span>
         </div>
         <div>
           <span className="text-body-4 2xl:text-body-1">Designed and coded with ❤️</span>

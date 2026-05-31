@@ -5,10 +5,10 @@ import extractImg from "./assets/images/extract.webp";
 import circuitsImg from "./assets/images/circuits.webp";
 
 export const siteConfig = {
-  name: "Vishesh Kumar",
-  title: "Vishesh Kumar - AI Product Manager & Strategy Lead",
-  description: "AI Product Manager and strategy lead based in San Francisco, CA. Specializing in AI/ML products, data-driven product strategy, and building products that scale.",
-  url: "https://vishesh0999.github.io/Portfolio",
+  name: "Vishesh Prajapati",
+  title: "Vishesh Prajapati - AI Product Manager & Strategy Lead",
+  description: "AI Product Manager — Enterprise GenAI | Vertex AI & Gemini | 470K+ Users Served | 40% Hallucination Reduction",
+  url: "https://visheshprajapati.com",
   email: "vishesh.aipm@gmail.com",
   social: {
     github: "https://github.com/vishesh0999",

@@ -178,7 +178,7 @@ export default function Experience({ forwardedRef }) {
         {/* Timeline Line */}
         <div 
           ref={timeline}
-          className="absolute left-4 sm:left-6 md:left-16 top-0 bottom-0 w-0.5 md:w-1 bg-gradient-to-b from-accent-400 via-accent-300 to-accent-200 rounded-full"
+          className="absolute left-4 sm:left-6 md:left-16 top-0 bottom-0 w-0.5 md:w-1 bg-gradient-to-b from-blue-500 via-blue-700 to-indigo-900 rounded-full"
         ></div>
 
         <div className="space-y-8 md:space-y-16">
@@ -193,39 +193,35 @@ export default function Experience({ forwardedRef }) {
               {/* Timeline Dot */}
               <div className={`absolute left-2.5 sm:left-4 md:left-14 top-4 sm:top-6 md:top-8 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 rounded-full border-2 sm:border-3 md:border-4 ${
                 exp.type === 'current' 
-                  ? 'bg-accent-400 border-white shadow-lg shadow-accent-400/30' 
-                  : 'bg-accent-300 border-white shadow-lg shadow-accent-300/30'
+                  ? 'bg-blue-500 border-gray-800 shadow-lg shadow-blue-500/30' 
+                  : 'bg-blue-700 border-gray-800 shadow-lg shadow-blue-700/20'
               }`}></div>
 
               {/* Experience Card */}
               <div className={`relative rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-500 hover:shadow-2xl ${
                 exp.type === 'current'
-                  ? 'bg-white border-2 border-secondary-300 hover:border-secondary-500 shadow-lg'
-                  : 'bg-white border-2 border-accent-200 hover:border-accent-400 shadow-lg'
+                  ? 'bg-white/[0.08] backdrop-blur-md border-2 border-blue-400/50 hover:border-blue-300/70 shadow-xl shadow-black/40'
+                  : 'bg-white/[0.08] backdrop-blur-md border border-white/20 hover:border-blue-400/50 shadow-xl shadow-black/40'
               }`}>
                 
                 {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 md:mb-8">
                   <div>
-                    <h3 className={`text-xl sm:text-2xl md:text-3xl font-bold mb-2 ${
-                      exp.type === 'current' ? 'text-accent-400' : 'text-accent-400'
-                    }`}>
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-white drop-shadow-md">
                       {exp.role}
                     </h3>
-                    <p className={`text-base sm:text-lg md:text-xl font-semibold ${
-                      exp.type === 'current' ? 'text-accent-300' : 'text-accent-300'
-                    }`}>
+                    <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-200">
                       {exp.company}
                     </p>
                   </div>
                   <div className="mt-3 lg:mt-0">
-                    <span className={`inline-flex items-center px-3 sm:px-4 md:px-6 py-2 md:py-3 rounded-full text-xs sm:text-sm font-bold tracking-wide ${
+                    <span className={`inline-flex items-center px-4 sm:px-5 md:px-7 py-2.5 md:py-3.5 rounded-full text-sm sm:text-base font-bold tracking-wide shadow-xl ${
                       exp.type === 'current'
-                        ? 'bg-accent-400 text-white shadow-lg'
-                        : 'bg-accent-300 text-white shadow-lg'
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-blue-600 text-white'
                     }`}>
                       {exp.type === 'current' && (
-                        <div className="w-2 h-2 bg-green-400 rounded-full mr-2 md:mr-3 animate-pulse"></div>
+                        <div className="w-2.5 h-2.5 bg-green-300 rounded-full mr-2 md:mr-3 animate-pulse"></div>
                       )}
                       {exp.period}
                     </span>
@@ -237,45 +233,35 @@ export default function Experience({ forwardedRef }) {
                   {exp.achievements.map((achievement, achIndex) => (
                     <div 
                       key={achIndex}
-                      className={`group relative p-4 sm:p-5 md:p-6 rounded-lg md:rounded-xl transition-all duration-300 hover:scale-105 ${
-                        exp.type === 'current'
-                          ? 'bg-secondary-50 hover:bg-secondary-100 border-2 border-secondary-200 hover:border-secondary-400'
-                          : 'bg-secondary-50 hover:bg-secondary-100 border-2 border-accent-200 hover:border-accent-400'
-                      }`}
+                      className={`group relative p-4 sm:p-5 md:p-6 rounded-lg md:rounded-xl transition-all duration-300 hover:scale-105 bg-white/[0.08] backdrop-blur-md hover:bg-white/[0.12] border border-white/[0.15] hover:border-blue-400/50 shadow-lg shadow-black/30`}
                     >
                       <div className="flex items-start gap-3 sm:gap-4">
-                        <div className={`flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg md:rounded-xl flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg ${
+                        <div className={`flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg md:rounded-xl flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-xl ${
                           exp.type === 'current'
-                            ? 'bg-gradient-to-br from-accent-400 to-accent-300'
-                            : 'bg-gradient-to-br from-accent-300 to-accent-200'
+                            ? 'bg-gradient-to-br from-blue-500 to-blue-700'
+                            : 'bg-gradient-to-br from-blue-600 to-indigo-700'
                         }`}>
                           <span className="text-center px-1">{achievement.metric}</span>
                         </div>
                         <div className="flex-1">
-                          <p className={`text-xs sm:text-sm leading-relaxed font-medium ${
-                            exp.type === 'current' ? 'text-accent-400' : 'text-accent-400'
-                          }`}>
+                          <p className="text-sm sm:text-base leading-relaxed font-semibold text-gray-100">
                             {achievement.description}
                           </p>
                         </div>
                       </div>
                       
                       {/* Hover Effect */}
-                      <div className={`absolute inset-0 rounded-lg md:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-                        exp.type === 'current'
-                          ? 'bg-gradient-to-r from-secondary-600/5 to-secondary-700/5'
-                          : 'bg-gradient-to-r from-accent-200/5 to-accent-300/5'
-                      }`}></div>
+                      <div className="absolute inset-0 rounded-lg md:rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-blue-500/10 to-indigo-500/10"></div>
                     </div>
                   ))}
                 </div>
 
                 {/* Decorative Elements - Hidden on mobile */}
                 <div className={`hidden md:block absolute top-4 right-4 w-20 h-20 rounded-full opacity-10 ${
-                  exp.type === 'current' ? 'bg-secondary-600' : 'bg-accent-200'
+                  exp.type === 'current' ? 'bg-blue-500' : 'bg-indigo-500'
                 }`}></div>
                 <div className={`hidden md:block absolute bottom-4 left-4 w-12 h-12 rounded-full opacity-5 ${
-                  exp.type === 'current' ? 'bg-secondary-600' : 'bg-accent-200'
+                  exp.type === 'current' ? 'bg-blue-500' : 'bg-indigo-500'
                 }`}></div>
               </div>
             </div>
@@ -283,7 +269,7 @@ export default function Experience({ forwardedRef }) {
         </div>
 
         {/* Bottom Timeline Cap */}
-        <div className="absolute left-2.5 sm:left-4 md:left-14 bottom-0 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-accent-200 rounded-full border-2 sm:border-3 md:border-4 border-white"></div>
+        <div className="absolute left-2.5 sm:left-4 md:left-14 bottom-0 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-blue-800 rounded-full border-2 sm:border-3 md:border-4 border-gray-800"></div>
       </div>
     </section>
   );

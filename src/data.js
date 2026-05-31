@@ -13,7 +13,6 @@ export const siteConfig = {
   social: {
     github: "https://github.com/vishesh0999",
     linkedin: "https://www.linkedin.com/in/vishesh-prajapati-aipm/",
-    twitter: "https://x.com/visheshkumar",
   },
 };
 
